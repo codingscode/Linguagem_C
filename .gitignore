@@ -9,6 +9,7 @@ paradas.txt
 .metadata
 # Prerequisites
 *.d
+*.mk
 
 # Object files
 *.o
