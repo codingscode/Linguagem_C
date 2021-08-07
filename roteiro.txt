@@ -16,6 +16,15 @@ export PATH
 
 
 
+compilador terminal:
+   gcc entrada.c -o saida.o
+   ./saida.o
+
+
+
+
+
+
 
 
 
