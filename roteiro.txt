@@ -1,0 +1,40 @@
+
+
+instalando compilador para c:
+   sudo apt-get install build-essential -y
+   gcc --version
+   
+
+em .bashrc:
+
+# Configurações Java
+JAVA_HOME=/home/linux/apps/jdk_16
+export JAVA_HOME
+
+PATH=$PATH:$JAVA_HOME/bin
+export PATH
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
