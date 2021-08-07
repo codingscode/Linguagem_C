@@ -18,7 +18,9 @@ int main() {
         gcc quest04.c -o saida.o -lm
         ./saida.o
 	 */
-
+    /*
+     em Project -> Properties ->
+     */
 }
 
 
