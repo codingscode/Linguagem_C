@@ -3,14 +3,10 @@
 
 
 int main() {
-	double num1;
-	double quadrado;
 
-	printf("digite um número:\n");
-	scanf("%lf", &num1);
-	quadrado = pow(num1, 2.0);
+	//q45
 
-	printf("o quadrado dele é : %lf \n", quadrado);
+
 	return 0;
 
 	/*
@@ -26,9 +22,8 @@ int main() {
 
 
 /*
-digite um número:
-4
-o quadrado dele é : 16.000000
+
+
 
 
 */

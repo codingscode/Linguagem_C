@@ -22,7 +22,6 @@ compilador terminal:
 
 
 
-gcc -o sphere sphere.c -lm
 
 
 
