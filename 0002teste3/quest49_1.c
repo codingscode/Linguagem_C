@@ -1,56 +1,3 @@
-
-#include <stdio.h>
-#include <time.h>
-
-int main() {
-	int horas, minutos, segundos, duracao_seg, seg;
-
-    printf("digite a hora:\n");
-    scanf("%d", &horas);
-    printf("digite a minutos:\n");
-    scanf("%d", &minutos);
-    printf("digite a segundos:\n");
-    scanf("%d", &segundos);
-    printf("digite a duração em segundos:\n");
-    scanf("%d", &duracao_seg);
-	seg = horas*3600 + minutos*60 + segundos;
-
-    printf("horas: %d, minutos: %d, segundos: %d, tempo: %d \n", horas, minutos, segundos, seg);
-    seg += duracao_seg;
-
-    if (seg > 86400) {
-       seg = seg % 86400;
-    }
-
-    printf("horas: %d, minutos: %d, segundos: %d, tempo: %d \n", seg/3600, (seg%3600)/60, ((seg % 3600) % 60), seg);
-
-    // 1628534623
-    return 0;
-}
-
-	/*
-     no terminal do arquivo usar:
-        gcc quest04.c -o saida.o -lm
-        ./saida.o
-	 */
-
-/*
-digite a hora:
-6
-digite a minutos:
-20
-digite a segundos:
-30
-digite a duração em segundos:
-4000
-horas: 6, minutos: 20, segundos: 30, tempo: 22830
-horas: 7, minutos: 27, segundos: 10, tempo: 26830
- */
-
-
-
-/*
-
 #include <stdio.h>
 #include <time.h>
 
@@ -64,6 +11,22 @@ int main() {
     printf("programa executado\n");
     return 0;
 }
+
+	/*
+     no terminal do arquivo usar:
+        gcc quest04.c -o saida.o -lm
+        ./saida.o
+	 */
+
+/*
+
+ */
+
+
+
+/*
+
+
 
 -----------------------
 
