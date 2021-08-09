@@ -3,12 +3,17 @@
 
 int main() {
 
-    time_t t;   // not a primitive datatype
-    time(&t);
+	time_t agora = time(NULL);
+	struct tm *tm_struct = localtime(&agora);
 
-    printf("momento: %s \n", ctime(&t));
+	int horas = tm_struct->tm_hour;
+	int minutos = tm_struct->tm_min;
+	int segundos = tm_struct->tm_sec;
 
-    printf("programa executado\n");
+	printf("hora: %d\n", horas);
+	printf("minutos: %d\n", minutos);
+	printf("segundos: %d\n", segundos);
+
     return 0;
 }
 
@@ -30,24 +35,7 @@ int main() {
 
 -----------------------
 
-#include <stdio.h>
-#include <time.h>
 
-int main() {
-
-	time_t agora = time(NULL);
-	struct tm *tm_struct = localtime(&agora);
-
-	int horas = tm_struct->tm_hour;
-	int minutos = tm_struct->tm_min;
-	int segundos = tm_struct->tm_sec;
-
-	printf("hora: %d\n", horas);
-	printf("minutos: %d\n", minutos);
-	printf("segundos: %d\n", segundos);
-
-    return 0;
-}
 
 -------------------------------------
 
