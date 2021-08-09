@@ -2,47 +2,6 @@
 #include <time.h>
 
 int main() {
-
-	time_t agora = time(NULL);
-	struct tm *tm_struct = localtime(&agora);
-
-	int horas = tm_struct->tm_hour;
-	int minutos = tm_struct->tm_min;
-	int segundos = tm_struct->tm_sec;
-
-	printf("hora: %d\n", horas);
-	printf("minutos: %d\n", minutos);
-	printf("segundos: %d\n", segundos);
-
-    return 0;
-}
-
-	/*
-     no terminal do arquivo usar:
-        gcc quest04.c -o saida.o -lm
-        ./saida.o
-	 */
-
-/*
-
- */
-
-
-
-/*
-
-
-
------------------------
-
-
-
--------------------------------------
-
-#include <stdio.h>
-#include <time.h>
-
-int main() {
 	int horas, minutos, segundos, duracao_seg;
 	time_t agora = time(NULL);
 	struct tm *tm_struct = localtime(&agora);
@@ -77,6 +36,30 @@ int main() {
     //https://www.geeksforgeeks.org/time-function-in-c/
     return 0;
 }
+
+
+
+	/*
+     no terminal do arquivo usar:
+        gcc quest04.c -o saida.o -lm
+        ./saida.o
+	 */
+
+/*
+
+ */
+
+
+
+/*
+
+
+
+-----------------------
+
+
+
+-------------------------------------
 
 
 
