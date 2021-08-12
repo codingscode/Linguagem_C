@@ -6,7 +6,14 @@
 int main() {
    int numero, soma = 0;
 
+   do {
+      printf("digite um número diferente de 0:\n");
+	  scanf("%d", &numero);
 
+	  soma += numero;
+   } while (numero != 0);
+
+   printf("soma: %d", soma);
 
 
    return 0;
