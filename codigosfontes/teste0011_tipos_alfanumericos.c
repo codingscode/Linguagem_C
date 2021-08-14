@@ -34,6 +34,10 @@ int main() {
       printf("opção desconhecida.\n");
    }
 
+   // gerar um alfabeto completo com um loop
+   for (int i = 97; i <= 122; i++) {
+      printf("%c ", i);
+   }
 
    return 0;
 }
@@ -47,10 +51,13 @@ int main() {
 */
 
 /*
-valor1: 15
-valor1: 6
-divisao: 2
-
+escolha uma opção:
+a - extrato da conta.
+b - saldo da conta.
+c - limite da conta.
+c
+seu limite é ...
+a b c d e f g h i j k l m n o p q r s t u v w x y z
 
 
 
