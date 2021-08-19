@@ -12,14 +12,19 @@
 
 int main() {
    int numero;
+   int* ponteiro;
 
    printf("informe um número:\n");
    scanf("%d", &numero);
 
+   // inicializando ponteiro
+   ponteiro = &numero;
+
    printf("o número informado foi %d. \n", numero);
+   printf("o endereço de número é : %d.\n", &numero);
    printf("o endereço de número é : %x.\n", &numero);
 
-
+   printf("endereço do ponteiro %p \n", ponteiro);  // endereço real hexadecimal
 
 
    return 0;
@@ -34,9 +39,11 @@ int main() {
 
 /*
 informe um número:
-3
-o número informado foi 3.
-o endereço de número é : 8f98b0d4.
+5
+o número informado foi 5.
+o endereço de número é : -199243828.
+o endereço de número é : f41fc7cc.
+endereço do ponteiro 0x7ffcf41fc7cc
 
 
 
