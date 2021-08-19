@@ -2,7 +2,7 @@
 
 
 /*
-
+arrays e ponteiros
 
 
 
@@ -11,21 +11,30 @@
 
 
 int main() {
-   int numero;
-   int* ponteiro;
+   int valores[5];
+   int numeros[4] = {4, 5, 6, 7};
 
-   printf("informe um número:\n");
-   scanf("%d", &numero);
+   for (int i = 0; i < 5; i++) {
+      printf("informe %dº valor: \n", i+1);
+      scanf("%d", &valores[i]);
+   }
 
-   // inicializando ponteiro
-   ponteiro = &numero;
+   printf("valores informados:\n");
 
-   printf("o número informado foi %d. \n", numero);
-   printf("o endereço de número é : %d.\n", &numero);
-   printf("o endereço de número é : %x.\n", &numero);
+   for (int i = 0; i < 5; i++) {
+      printf("valor %dº: %d \n", i+1, valores[i]);
+   }
 
-   printf("endereço do ponteiro %p \n", ponteiro);  // endereço real hexadecimal
+   printf("outro:\n");
 
+   for (int i = 0; i < 4; i++) {
+      printf("%d ", numeros[i]);
+   }
+
+   printf("\n----------------\n");
+   printf("endereço valores[0]: %p\n", &(valores[0]));
+   printf("endereço valores: %p\n", &valores);
+   printf("valores: %d\n", valores);
 
    return 0;
 }
@@ -38,12 +47,31 @@ int main() {
 */
 
 /*
-informe um número:
+informe 1º valor:
+4
+informe 2º valor:
 5
-o número informado foi 5.
-o endereço de número é : -199243828.
-o endereço de número é : f41fc7cc.
-endereço do ponteiro 0x7ffcf41fc7cc
+informe 3º valor:
+6
+informe 4º valor:
+7
+informe 5º valor:
+8
+valores informados:
+valor 1º: 4
+valor 2º: 5
+valor 3º: 6
+valor 4º: 7
+valor 5º: 8
+outro:
+4 5 6 7
+----------------
+endereço valores[0]: 0x7ffd16ae7b90
+endereço valores: 0x7ffd16ae7b90
+valores: 380533648
+
+
+
 
 
 
