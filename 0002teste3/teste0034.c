@@ -11,12 +11,15 @@ int main() {
    FILE *arquivo;
    int numero, resultado, soma = 0;
 
-   arquivo = fopen("teste0033_arquivo.txt", "r");
+   arquivo = fopen("teste0034_arquivo.txt", "r");
 
    if (arquivo) {
       while(!feof(arquivo)) {
-	     fscanf(arquivo, "%d", &numero);
-	     soma += numero;
+	     resultado = fscanf(arquivo, "%d", &numero);
+	     printf("resultado: %d\n", resultado);
+	     if (resultado == 1) { // só efetua soma se encontrar número
+	        soma += numero;
+	     }
       }
    }
    else {
@@ -37,12 +40,19 @@ int main() {
 */
 
 /*
-a soma é 91
+resultado: 1
+resultado: 1
+resultado: 1
+resultado: 1
+resultado: 1
+resultado: -1
+a soma é 83
 
 
 
 
-obs: a quantidade de linhas vazias com quebra no final do arquivo repete mais uma vez a última linha preenchida.
+
+obs: agora bateu.
 
 
 */
