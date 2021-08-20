@@ -11,7 +11,7 @@ int main() {
    FILE *arquivo;
    char fruta[10];
 
-   arquivo = fopen("teste0035_frutas.txt", "w");  // write
+   arquivo = fopen("teste0036_frutas.txt", "wa");  // continua sobrescrevendo
 
    if (arquivo) {
       printf("Informe uma fruta, ou 0 para sair:\n");
@@ -40,13 +40,13 @@ int main() {
 
 /*
 Informe uma fruta, ou 0 para sair:
-goiaba
-informe uma fruta, ou 0 para sair:
 jaca
 informe uma fruta, ou 0 para sair:
-maçã
+ata
 informe uma fruta, ou 0 para sair:
-graviola
+manga
+informe uma fruta, ou 0 para sair:
+laranja
 informe uma fruta, ou 0 para sair:
 0
 
