@@ -4,7 +4,7 @@
 
 
 /*
-
+structs -> estrutura
 
 */
 
@@ -14,11 +14,11 @@ struct st_aluno {
    char nome[100];
    char curso[50];
    int ano_nascimento;
-};
+} aluno1, aluno2, aluno3;
 
 
 int main() {
-   struct st_aluno aluno1;
+
 
    printf("informe a matrícula do aluno:\n");
    fgets(aluno1.matricula, 10, stdin);
@@ -50,22 +50,25 @@ int main() {
 
 /*
 informe a matrícula do aluno:
-123124
+324234
 informe o nome do aluno:
-vicente goodman
+bob stwart
 informe o curso do aluno:
-computação
+desenho comics
 informe o ano nascimento do aluno:
-1999
+2001
 
 ========== dados do aluno ==============
-matricula: 123124
+matricula: 324234
 
-nome: vicente goodman
+nome: bob stwart
 
-curso: computação
+curso: desenho comics
 
-ano nascimento: 1999
+ano nascimento: 2001
+
+
+
 
 
 
