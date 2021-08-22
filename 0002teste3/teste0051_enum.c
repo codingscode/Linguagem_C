@@ -19,15 +19,21 @@ int main() {
    d2 = 4;  // ou sexta
    //d2 = "outro";  // dá erro
 
+   int numeros[3];
+   numeros[0] = 4;
+   numeros[1] = 5;
+   numeros[2] =6;
+
 
    if (d1 == d2) {
-      printf("os dias são iguais.");
+      printf("os dias são iguais.\n");
    }
    else {
-      printf("os dias são diferentes.");
+      printf("os dias são diferentes.\n");
    }
 
-
+   printf("numeros indice 0: %d\n", numeros[0]);
+   printf("numeros indice 10: %d\n", numeros[10]);
 
 
    return 0;
