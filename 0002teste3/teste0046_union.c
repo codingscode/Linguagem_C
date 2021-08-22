@@ -24,6 +24,8 @@ int main() {
    pes.idade = 39;
    printf("ele tem %d anos.\n", pes.idade);
 
+   printf("dados de %s\n", pes.nome);  // desaloca
+
    printf("a variavel 'pes' ocupa %ld bytes.\n", sizeof(pes));
 
 
@@ -40,8 +42,8 @@ int main() {
 /*
 dados de bob allan
 ele tem 39 anos.
+dados de '
 a variavel 'pes' ocupa 100 bytes.
-
 
 
 
