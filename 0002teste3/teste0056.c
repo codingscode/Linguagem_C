@@ -7,8 +7,8 @@ ifndef - diretiva de compilação
 
 */
 
-#ifndef PI
-   #define PI 3.14
+#ifndef PI  // se PI não definido. se PI existir
+   #define PI 3.14  // defina
 #endif
 
 int main() {
@@ -19,6 +19,12 @@ int main() {
    printf("valor: %d\n", valor);
    printf("PI: %f\n", PI);
    printf("2*PI: %f\n", 2*PI);
+
+   #ifdef PI
+      printf("valor de PI: %f\n", PI);
+   #endif
+
+
 
    return 0;
 }
@@ -34,6 +40,7 @@ int main() {
 valor: 400
 PI: 3.140000
 2*PI: 6.280000
+valor de PI: 3.140000
 
 
 
