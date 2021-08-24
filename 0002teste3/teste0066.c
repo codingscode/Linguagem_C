@@ -27,36 +27,26 @@ pesquisa e ordenação
 qsort() -> ordena os elementos de uma array
 
 
+aritmética de inteiros
+abs() valor absoluto
+
+
+
 
 */
 
-int compara(int *x, int *y) {
-   if (*x > *y) {
-      return 1;
-   }
-   else if (*x == *y) {
-      return 0;
-   }
-   else {
-      return -1;
-   }
-}
+
+
 
 
 int main() {
-   int numeros[] = { 8, 3, 12, 29, 15, 22, 10 };
+   int valor_a, valor_b;
 
-   for (int i = 0; i < 7; i++) {
-      printf("%d ", numeros[i]);
-   }
-   printf("\n");
+   valor_a = abs(6);
+   printf("valor absoluto de 6 é %d.\n", valor_a);
 
-   qsort(numeros, 7, sizeof(int), (void *)compara); // (iteravel, tamanho ocupado de cada elemento, quantidade elementos, cast)
-
-   for (int i = 0; i < 7; i++) {
-      printf("%d ", numeros[i]);
-   }
-   printf("\n");
+   valor_b = abs(valor_b);
+   printf("valor absoluto de -10 é %d.\n", valor_b);
 
 
    return 0;
@@ -70,8 +60,10 @@ int main() {
 */
 
 /*
-8 3 12 29 15 22 10
-3 8 10 12 15 22 29
+valor absoluto de 6 é 6.
+valor absoluto de -10 é 10.
+
+
 
 
 
