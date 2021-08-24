@@ -22,6 +22,10 @@ srand()   -> inicializa o gerador de numeros aleatorios
 
 
 int main() {
+   time_t t;
+
+   // inicializar o gerador
+   srand((unsigned) time(&t));
 
    // gerar 6 numeros entre 0 e 60
    for (int i=0; i < 6; i++) {
@@ -40,26 +44,26 @@ int main() {
 
 /*
 1ª vez:
-29
 54
-3
-54
-7
-49
+38
+36
+23
+17
+11
 
 2ºvez:
-29
-54
-3
-54
-7
-49
+8
+25
+28
+33
+17
+47
 
 
 
 
 
-
+são diferentes
 
 
 */
