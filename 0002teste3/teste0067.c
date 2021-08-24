@@ -29,7 +29,7 @@ qsort() -> ordena os elementos de uma array
 
 aritmética de inteiros
 abs() valor absoluto
-
+div() -> divisão inteira
 
 
 
@@ -40,13 +40,11 @@ abs() valor absoluto
 
 
 int main() {
-   int valor_a, valor_b;
+   div_t saida;  // descansar o cursor em cima de div_t
 
-   valor_a = abs(6);
-   printf("valor absoluto de 6 é %d.\n", valor_a);
-
-   valor_b = abs(valor_b);
-   printf("valor absoluto de -10 é %d.\n", valor_b);
+   saida = div(27, 4);  //  27/4
+   printf("quociente de 27/4 : %d\n", saida.quot);
+   printf("resto de 27/4 : %d\n", saida.rem);
 
 
    return 0;
@@ -60,8 +58,8 @@ int main() {
 */
 
 /*
-valor absoluto de 6 é 6.
-valor absoluto de -10 é 10.
+quociente de 27/4 : 6
+resto de 27/4 : 3
 
 
 
