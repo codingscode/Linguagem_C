@@ -6,7 +6,7 @@
 /*
 atof() -> convert string para double
 atoi() -> converte uma string para inteiro
-
+atol() -> converte string para inteliro longo
 
 
 */
@@ -15,15 +15,15 @@ atoi() -> converte uma string para inteiro
 
 int main() {
 
-   char valor_s[5];
-   int valor_i;
+   char valor_s[20];
+   long int valor_il;
 
-   strcpy(valor_s, "4");  // se fosse "b" -> 0
+   strcpy(valor_s, "4534636436");  //
    printf("valor_s: %s\n", valor_s);
 
-   valor_i = atoi(valor_s);
+   valor_il = atol(valor_s);
 
-   printf("valor_i: %d\n", valor_i);
+   printf("valor_il: %ld\n", valor_il);
 
 
    return 0;
@@ -37,8 +37,8 @@ int main() {
 */
 
 /*
-valor_s: 4
-valor_i: 4
+valor_s: 4534636436
+valor_il: 4534636436
 
 
 
