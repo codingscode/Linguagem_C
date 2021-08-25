@@ -20,19 +20,20 @@ sin()
 tan()
 
 
+funções hiperbolicas
+cosh()
+sinh()
+tanh()
+
+
+
 */
 
 
 int main() {
    float angulo = 3.141592/4;  // em radianos. em graus é 45°
-   float coseno1 = cos(angulo);
-   float seno1 = sin(angulo);
-   float tangente1 = tan(angulo);
 
 
-   printf("o coseno de %.2f é %f\n", angulo, coseno1);
-   printf("o seno de %.2f é %f\n", angulo, seno1);
-   printf("a tangente de %.2f é %f\n", angulo, tangente1);
 
 
    return 0;
@@ -46,7 +47,9 @@ int main() {
 */
 
 /*
-o coseno de 1.20 é 0.362358
+o coseno hiperbolico de 0.79 é 1.324609
+o seno hiperbolico de 0.79 é 0.868671
+a tangente hiperbolico de 0.79 é 0.655794
 
 
 
