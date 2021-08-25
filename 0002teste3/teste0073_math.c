@@ -36,18 +36,27 @@ funções de potencia
 pow(base, expoente)
 sqrt()
 
+funções de arrendondamento valor absoluto e outros
+ceil()
+floor()
+
+
+
 */
 
 
 int main() {
 
-   int a = 8, b = 2, c = 4;
-   float x = (float) 1/3, y = 2.5;
+   float numero1 = 7.8;
+   float numero2 = 8.429;
 
-   printf("%d elevado a %d: %d\n", a, b, (int) pow(a, b));
-   printf("%d elevado a %f: %.2f\n", a, x, pow(a, x));
-   printf("%d elevado a %.2f: %.2f\n", b, y, pow(b, y));
-   printf("raiz quadrada de %d: %.2f\n", c, sqrt(c));
+
+   printf("%.2f arredondando para cima é %.2f\n", numero1, ceil(numero1));
+   printf("%.2f arredondando para baixo é %.2f\n\n", numero1, floor(numero1));
+
+   printf("%.2f arredondando para cima é %.2f\n", numero2, ceil(numero2));
+   printf("%.2f arredondando para baixo é %.2f\n", numero2, floor(numero2));
+
 
    return 0;
 }
@@ -60,10 +69,11 @@ int main() {
 */
 
 /*
-8 elevado a 2: 64
-8 elevado a 0.333333: 2.00
-2 elevado a 2.50: 5.66
-raiz quadrada de 4: 2.00
+7.80 arredondando para cima é 8.00
+7.80 arredondando para baixo é 7.00
+
+8.43 arredondando para cima é 9.00
+8.43 arredondando para baixo é 8.00
 
 
 
