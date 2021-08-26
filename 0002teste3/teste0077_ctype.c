@@ -43,6 +43,9 @@ void verificar(char carac) {
    else if(ispunct(carac)) {
       printf("%c é pontuação.\n", carac);
    }
+   else if(isspace(carac)) {
+	  printf("(%c) é espaço em branco.\n", carac);
+   }
    else {
       printf("nenhuma das anteriores.\n");
    }
@@ -55,6 +58,7 @@ int main() {
    char caractere2 = 'b';
    char caractere3 = 'K';
    char caractere4 = '8';
+   char caractere5 = ' ';
 
 
    verificar(caractere1);
@@ -65,6 +69,7 @@ int main() {
    printf("---------------\n");
    verificar(caractere4);
    printf("---------------\n");
+   verificar(caractere5);
    printf("---------------\n");
 
 
@@ -79,6 +84,21 @@ int main() {
 */
 
 /*
+! é pontuação.
+---------------
+b é alfanumérico.
+b é alfabetico.
+b é minusculo.
+---------------
+K é alfanumérico.
+K é alfabetico.
+K é maiusculo.
+---------------
+8 é alfanumérico.
+8 é digito decimal.
+---------------
+( ) é espaço em branco.
+---------------
 
 
 
