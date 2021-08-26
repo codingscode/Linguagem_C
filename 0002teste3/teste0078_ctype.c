@@ -71,7 +71,8 @@ int main() {
    printf("---------------\n");
    verificar(caractere5);
    printf("---------------\n");
-
+   printf("%c em maiusculo é %c.\n", caractere2, toupper(caractere2));
+   printf("%c em minusculo é %c.\n", caractere3, tolower(caractere3));
 
    return 0;
 }
