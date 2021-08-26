@@ -14,6 +14,7 @@ isdigit() -> " se o caractere é uma digito decimal
 ispunct() -> '' se o caractere é uma pontuação (?!.)
 isspace() -> "" se é um espaço ( )
 isupper() -> "" é maiuscula
+islower() -> "" é minuscula
 tolower() -> converte para minuscula
 toupper() -> converte para maiuscula
 
@@ -24,17 +25,26 @@ toupper() -> converte para maiuscula
 
 
 int main() {
-   char caractere1 = 'h';
+   char caractere1 = 'B';
 
 
    if (isalnum(caractere1)) {
       printf("%c é alfanumérico.\n", caractere1);
-   }
-   else if (isalpha(caractere1)) {
-	  printf("%c é alfabetico.\n", caractere1);
-   }
-   else if (isdigit(caractere1)) {
-      printf("%c é digito decimal.\n", caractere1);
+
+      if (isalpha(caractere1)) {
+	     printf("%c é alfabetico.\n", caractere1);
+
+	     if (isupper(caractere1)) {
+	        printf("%c é maiusculo.\n", caractere1);
+	     }
+	     else {
+	    	printf("%c é minusculo.\n", caractere1);
+	     }
+	  }
+	  if (isdigit(caractere1)) {
+		 printf("%c é digito decimal.\n", caractere1);
+	  }
+
    }
    else {
       printf("nenhuma das anteriores.\n");
