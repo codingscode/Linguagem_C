@@ -13,7 +13,7 @@ strcat() -> concatena strings
 strcmp() -> compara duas strings
 strchr() -> localiza a primeira ocorrencia de caractere1actere em uma string
 strtok() -> divide uma string em sub-strings com base em um caractere
-
+strlen() -> retorna o comprimento da string
 
 
 */
@@ -23,9 +23,9 @@ strtok() -> divide uma string em sub-strings com base em um caractere
 
 int main() {
 
-   char string1[] = "pedro@gmail.com";
+   char string1[] = "jeriquaquara";
 
-   printf("usuario: '%s'\n", strtok(string1, "@"));
+   printf("tamanho de string1: %d\n", strlen(string1));
 
    return 0;
 }
@@ -38,7 +38,8 @@ int main() {
 */
 
 /*
-usuario: 'pedro'
+tamanho de string1: 12
+
 
 
 
