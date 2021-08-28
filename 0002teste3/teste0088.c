@@ -20,10 +20,13 @@ https://pt.wikipedia.org/wiki/Era_Unix
 
 
 int main() {
-   time_t segundos;  // testar descansar o curso em cima de time_t
+   time_t tempobruto;
+   struct tm *info;
 
-   segundos = time(NULL);
-   printf("horas desde de 01/01/1970: %ld\n", segundos/3600);
+   time(&tempobruto);
+
+   info = localtime(&tempobruto);
+   printf("data e hora locais: %s\n", asctime(info));
 
    return 0;
 }
@@ -36,7 +39,9 @@ int main() {
 */
 
 /*
-horas desde de 01/01/1970: 452824
+data e hora locais: Sat Aug 28 13:17:43 2021
+
+
 
 
 
