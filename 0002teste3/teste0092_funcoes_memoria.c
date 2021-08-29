@@ -18,8 +18,7 @@ int main() {
    printf("informe a quantidade de elementos para o vetor: \n");
    scanf("%d", &quantidade);
 
-   int bytes = quantidade * sizeof(int);
-   p = (int*)malloc(bytes);
+   p = (int*)malloc(quantidade * sizeof(int));
 
    for (int i = 0; i < quantidade; i++) {
       printf("informe valor para posição %d do vetor: \n", i);
@@ -30,7 +29,7 @@ int main() {
       printf("no vetor 'p[%d]' está o valor %d.\n", i, p[i]);
    }
 
-   printf("a variavel 'p' ocupa %d bytes de memória.\n", bytes);
+   printf("a variavel 'p' ocupa %ld bytes de memória.\n", quantidade * sizeof(int));
 
 
    return 0;
@@ -45,20 +44,17 @@ int main() {
 
 /*
 informe a quantidade de elementos para o vetor:
-4
+3
 informe valor para posição 0 do vetor:
-20
+40
 informe valor para posição 1 do vetor:
-8
-informe valor para posição 2 do vetor:
 2
-informe valor para posição 3 do vetor:
-10
-no vetor 'p[0]' está o valor 20.
-no vetor 'p[1]' está o valor 8.
-no vetor 'p[2]' está o valor 2.
-no vetor 'p[3]' está o valor 10.
-a variavel 'p' ocupa 16 bytes de memória.
+informe valor para posição 2 do vetor:
+12
+no vetor 'p[0]' está o valor 40.
+no vetor 'p[1]' está o valor 2.
+no vetor 'p[2]' está o valor 12.
+a variavel 'p' ocupa 12 bytes de memória.
 
 
 
