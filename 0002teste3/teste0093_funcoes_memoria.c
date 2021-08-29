@@ -31,6 +31,9 @@ int main() {
 
    printf("a variavel 'p' ocupa %ld bytes de memória.\n", quantidade * sizeof(int));
 
+   // liberar a memória (desalocar)
+   free(p);
+   p = NULL;  // medida de segurança
 
    return 0;
 }
@@ -44,17 +47,23 @@ int main() {
 
 /*
 informe a quantidade de elementos para o vetor:
-3
+5
 informe valor para posição 0 do vetor:
-40
+80
 informe valor para posição 1 do vetor:
-2
+6
 informe valor para posição 2 do vetor:
-12
-no vetor 'p[0]' está o valor 40.
-no vetor 'p[1]' está o valor 2.
-no vetor 'p[2]' está o valor 12.
-a variavel 'p' ocupa 12 bytes de memória.
+15
+informe valor para posição 3 do vetor:
+1
+informe valor para posição 4 do vetor:
+7
+no vetor 'p[0]' está o valor 80.
+no vetor 'p[1]' está o valor 6.
+no vetor 'p[2]' está o valor 15.
+no vetor 'p[3]' está o valor 1.
+no vetor 'p[4]' está o valor 7.
+a variavel 'p' ocupa 20 bytes de memória.
 
 
 
