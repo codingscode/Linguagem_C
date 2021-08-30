@@ -18,7 +18,7 @@ int main() {
    printf("informe a quantidade de elementos para o vetor: \n");
    scanf("%d", &quantidade);
 
-   p = (int*)malloc(quantidade * sizeof(int));
+   p = (int*)calloc(quantidade, sizeof(int));
 
    if (p) {
       /*for (int i = 0; i < quantidade; i++) {
