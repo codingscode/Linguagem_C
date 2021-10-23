@@ -3,24 +3,12 @@
 
 /*
 
-busca linear -> também chamada de busca squencial é utilizada para fazer buscas de elementos em vetores ordenados
-elemento a elemento, de modo que a função do tempo em relação ao numero de elementos é linear, ou seja,
-cresce proporcionalmente.
 
 
 
 */
 
 
-int busca_linear(int vetor[], int chave, int tam) {
-
-   for (int i = 0; i < tam; i++) {
-      if (vetor[i] == chave) {
-         return i;
-      }
-   }
-   return -1;
-}
 
 
 int main() {
@@ -48,7 +36,8 @@ int main() {
 */
 
 /*
-O elemento 12 está na posição 4
+
+
 
 
 */
