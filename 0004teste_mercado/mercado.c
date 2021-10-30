@@ -13,10 +13,12 @@ typedef struct {
    float preco;
 } Produto;
 
+
 typedef struct {
    Produto produto;
    int quantidade;
 } Carrinho;
+
 
 void infoProduto(Produto prod);
 void menu();
@@ -80,7 +82,7 @@ void menu() {
          fecharPedido();
          break;         
       case 6:
-         printf("Volte sempre!\n");
+         printf("\nVolte sempre!\n");
          sleep(2);
          exit(0);
       default:
@@ -104,11 +106,13 @@ void cadastrarProduto(){
    printf("Informe o preço do produto:\n");   
    scanf("%f", &produtos[contador_produto].preco);
    
-   printf("O produto %s foi cadastrado com sucesso.\n", strtok(produtos[contador_produto].nome, "\n"));
+   printf("O produto %s foi cadastrado com sucesso.\n\n", strtok(produtos[contador_produto].nome, "\n"));
    
    produtos[contador_produto].codigo = (contador_produto + 1);
    contador_produto++;
    
+   sleep(2);
+   menu();
 }
 
 void listarProdutos(){
@@ -120,9 +124,8 @@ void listarProdutos(){
          printf("---------------\n");
          sleep(1);
       }
-      int codigo;
-      scanf("%d", &codigo);
-      getchar();
+      sleep(2);
+      menu();
    }
    else {
       printf("Não temos ainda produtos cadastrados.\n");
@@ -135,7 +138,7 @@ void comprarProduto() {
    if (contador_produto > 0) {
       printf("Informe o código do produto que deseja adicionar ao carrinho:\n");
 
-      printf("========== Produtos Disponíveis =============");
+      printf("========== Produtos Disponíveis =============\n");
       for (int i = 0; i < contador_produto; i++) {
          infoProduto(produtos[i]);
          printf("----------------------\n");
@@ -205,6 +208,8 @@ void visualizarCarrinho(){
          printf("------------------------\n");
          sleep(1);
       }
+      sleep(2);
+      menu();
    }
    else {
       printf("Não temos ainda produtos no carrinho.\n");
@@ -245,7 +250,7 @@ void fecharPedido(){
          valorTotal += p.preco * quantidade;
          infoProduto(p);
          printf("Quantidade: %d\n", quantidade);
-         printf("-------------------");
+         printf("-------------------\n");
          sleep(1);
       }
       printf("Sua fatura é R$ %.2f\n", valorTotal);
