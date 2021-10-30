@@ -47,9 +47,9 @@ void infoProduto(Produto prod) {
 }
 
 void menu() {
-   printf("==========================\n");
+   printf("========================================\n");
    printf("============ Bem-vindo(a) ==============\n");
-   printf("============ Geek Shop ==============\n");
+   printf("============ Geek Shop =================\n");
    
    printf("Selecione uma opção abaixo:\n");
    printf("1 - Cadastrar produto.\n");
@@ -61,7 +61,7 @@ void menu() {
    
    int opcao;
    scanf("%d", &opcao);
-   getchar(0);
+   getchar();
    
    switch(opcao) {
       case 1:
@@ -126,6 +126,8 @@ void listarProdutos(){
    }
    else {
       printf("Não temos ainda produtos cadastrados.\n");
+      sleep(2);
+      menu();
    }
 }
 
@@ -206,6 +208,8 @@ void visualizarCarrinho(){
    }
    else {
       printf("Não temos ainda produtos no carrinho.\n");
+      sleep(2);
+      menu();
    }
 }
 
