@@ -271,6 +271,267 @@ void fecharPedido(){
 
 
 /*
+========================================
+============ Bem-vindo(a) ==============
+============ Geek Shop =================
+Selecione uma opção abaixo:
+1 - Cadastrar produto.
+2 - Listar produtos.
+3 - Comprar produto.
+4 - Visualizar carrinho.
+5 - Fechar pedido.
+6 - Sair do sistema.
+1
+Cadastro de Produto
+====================
+Informe o nome do produto:
+pendrive
+Informe o preço do produto:
+33
+O produto pendrive foi cadastrado com sucesso.
+
+========================================
+============ Bem-vindo(a) ==============
+============ Geek Shop =================
+Selecione uma opção abaixo:
+1 - Cadastrar produto.
+2 - Listar produtos.
+3 - Comprar produto.
+4 - Visualizar carrinho.
+5 - Fechar pedido.
+6 - Sair do sistema.
+1
+Cadastro de Produto
+====================
+Informe o nome do produto:
+galaxy
+Informe o preço do produto:
+900
+O produto galaxy foi cadastrado com sucesso.
+
+========================================
+============ Bem-vindo(a) ==============
+============ Geek Shop =================
+Selecione uma opção abaixo:
+1 - Cadastrar produto.
+2 - Listar produtos.
+3 - Comprar produto.
+4 - Visualizar carrinho.
+5 - Fechar pedido.
+6 - Sair do sistema.
+1
+Cadastro de Produto
+====================
+Informe o nome do produto:
+playstation 2
+Informe o preço do produto:
+1000
+O produto playstation 2 foi cadastrado com sucesso.
+
+========================================
+============ Bem-vindo(a) ==============
+============ Geek Shop =================
+Selecione uma opção abaixo:
+1 - Cadastrar produto.
+2 - Listar produtos.
+3 - Comprar produto.
+4 - Visualizar carrinho.
+5 - Fechar pedido.
+6 - Sair do sistema.
+2
+Listagem de produtos.
+----------------------
+Código: 1
+Nome: pendrive
+Preço: 33.00
+---------------
+Código: 2
+Nome: galaxy
+Preço: 900.00
+---------------
+Código: 3
+Nome: playstation 2
+Preço: 1000.00
+---------------
+========================================
+============ Bem-vindo(a) ==============
+============ Geek Shop =================
+Selecione uma opção abaixo:
+1 - Cadastrar produto.
+2 - Listar produtos.
+3 - Comprar produto.
+4 - Visualizar carrinho.
+5 - Fechar pedido.
+6 - Sair do sistema.
+3
+Informe o código do produto que deseja adicionar ao carrinho:
+========== Produtos Disponíveis =============
+Código: 1
+Nome: pendrive
+Preço: 33.00
+----------------------
+Código: 2
+Nome: galaxy
+Preço: 900.00
+----------------------
+Código: 3
+Nome: playstation 2
+Preço: 1000.00
+----------------------
+1
+O produto pendrive foi adicionado ao carrinho.
+========================================
+============ Bem-vindo(a) ==============
+============ Geek Shop =================
+Selecione uma opção abaixo:
+1 - Cadastrar produto.
+2 - Listar produtos.
+3 - Comprar produto.
+4 - Visualizar carrinho.
+5 - Fechar pedido.
+6 - Sair do sistema.
+3
+Informe o código do produto que deseja adicionar ao carrinho:
+========== Produtos Disponíveis =============
+Código: 1
+Nome: pendrive
+Preço: 33.00
+----------------------
+Código: 2
+Nome: galaxy
+Preço: 900.00
+----------------------
+Código: 3
+Nome: playstation 2
+Preço: 1000.00
+----------------------
+2
+O produto galaxy foi adicionado ao carrinho.
+========================================
+============ Bem-vindo(a) ==============
+============ Geek Shop =================
+Selecione uma opção abaixo:
+1 - Cadastrar produto.
+2 - Listar produtos.
+3 - Comprar produto.
+4 - Visualizar carrinho.
+5 - Fechar pedido.
+6 - Sair do sistema.
+3
+Informe o código do produto que deseja adicionar ao carrinho:
+========== Produtos Disponíveis =============
+Código: 1
+Nome: pendrive
+Preço: 33.00
+----------------------
+Código: 2
+Nome: galaxy
+Preço: 900.00
+----------------------
+Código: 3
+Nome: playstation 2
+Preço: 1000.00
+----------------------
+2
+Aumentei a quantidade do produto galaxy já existente no carrinho.
+========================================
+============ Bem-vindo(a) ==============
+============ Geek Shop =================
+Selecione uma opção abaixo:
+1 - Cadastrar produto.
+2 - Listar produtos.
+3 - Comprar produto.
+4 - Visualizar carrinho.
+5 - Fechar pedido.
+6 - Sair do sistema.
+4
+Produtos do Carrinho
+----------------------
+Código: 1
+Nome: pendrive
+Preço: 33.00
+Quantidade: 1
+------------------------
+Código: 2
+Nome: galaxy
+Preço: 900.00
+Quantidade: 2
+------------------------
+========================================
+============ Bem-vindo(a) ==============
+============ Geek Shop =================
+Selecione uma opção abaixo:
+1 - Cadastrar produto.
+2 - Listar produtos.
+3 - Comprar produto.
+4 - Visualizar carrinho.
+5 - Fechar pedido.
+6 - Sair do sistema.
+5
+Produtos do Carrinho
+---------------------
+Código: 1
+Nome: pendrive
+Preço: 33.00
+Quantidade: 1
+-------------------
+Código: 2
+Nome: galaxy
+Preço: 900.00
+Quantidade: 2
+-------------------
+Sua fatura é R$ 1833.00
+Obrigado pela preferência.
+========================================
+============ Bem-vindo(a) ==============
+============ Geek Shop =================
+Selecione uma opção abaixo:
+1 - Cadastrar produto.
+2 - Listar produtos.
+3 - Comprar produto.
+4 - Visualizar carrinho.
+5 - Fechar pedido.
+6 - Sair do sistema.
+4
+Não temos ainda produtos no carrinho.
+========================================
+============ Bem-vindo(a) ==============
+============ Geek Shop =================
+Selecione uma opção abaixo:
+1 - Cadastrar produto.
+2 - Listar produtos.
+3 - Comprar produto.
+4 - Visualizar carrinho.
+5 - Fechar pedido.
+6 - Sair do sistema.
+2
+Listagem de produtos.
+----------------------
+Código: 1
+Nome: pendrive
+Preço: 33.00
+---------------
+Código: 2
+Nome: galaxy
+Preço: 900.00
+---------------
+Código: 3
+Nome: playstation 2
+Preço: 1000.00
+---------------
+========================================
+============ Bem-vindo(a) ==============
+============ Geek Shop =================
+Selecione uma opção abaixo:
+1 - Cadastrar produto.
+2 - Listar produtos.
+3 - Comprar produto.
+4 - Visualizar carrinho.
+5 - Fechar pedido.
+6 - Sair do sistema.
+6
+
+Volte sempre!
 
 
 
