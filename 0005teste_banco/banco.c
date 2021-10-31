@@ -112,7 +112,65 @@ void infoConta(Conta conta){
 }
 
 void criarConta(){
-
+   Cliente cliente;
+   
+   // Data de cadastro
+   char dia[3]; //06\0
+   char mes[3]; //08
+   char ano[5]; //2020
+   char data_cadastro[20];
+   time_t t = time(NULL);
+   struct tm tm = *localtime(&t);
+   
+   // dia
+   if (tm.tm_mday < 10) {
+      sprintf(dia, "0%d", tm.tm_mday);
+   }
+   else {
+      sprintf(dia, "%d", tm.tm_mday);
+   }
+   
+   // mês
+   if ((tm.tm_mon + 1) < 10) {
+      sprintf(mes, "0%d", tm.tm_mon + 1);
+   }
+   else {
+      sprintf(mes, "%d", tm.tm_mon + 1);
+   }
+   
+   // ano
+   sprintf(ano, "%d", tm.tm_year + 1900);
+   
+   strcpy(data_cadastro, "");
+   strcat(data_cadastro, dia);  // 22
+   strcat(data_cadastro, "/");  // 22/
+   strcat(data_cadastro, mes);  // 22/08
+   strcat(data_cadastro, "/");  // 22/08/
+   strcat(data_cadastro, ano);  // 22/08/2020
+   strcat(data_cadastro, "\0");
+   strcpy(cliente.dataCadastro, data_cadastro);
+   
+   // Criar o cliente
+   printf("Informe os dados do cliente:\n");
+   cliente.codigo = contador_clientes + 1;
+   
+   printf("Nome do cliente:\n");
+   fgets(cliente.nome, 50, stdin);
+   
+   printf("E-mail do cliente:\n");
+   fgets(cliente.email, 50, stdin);
+   
+   printf("CPF do cliente:\n");
+   fgets(cliente.cpf, 20, stdin);
+   
+   printf("Data de nascimento do cliente:\n");
+   fgets(cliente.dataNascimento, 20, stdin);
+   
+   contador_clientes++;
+   
+   // Criar conta
+   contas[contador_contas].numero = contador_contas + 1;
+   contas[contador_contas].cliente = cliente;
 }
 
 float atualizaSaldoTotal(Conta conta){
