@@ -157,11 +157,50 @@ void sacar(Conta conta, float valor){
 }
 
 void depositar(Conta conta, float valor){
-
+   if (valor > 0) {
+      for (int i = 0; i < contador_contas; i++) {
+         if (contas[i].numero == conta.numero) {
+            contas[i].saldo += valor;
+            contas[i].saldoTotal = atualizaSaldoTotal(contas[i]);
+            printf("Depósito efetuado com sucesso!\n");
+         }
+      }
+   }
+   else {
+      printf("Erro ao efetuar depósito. Tente novamente.\n");
+   }
 }
 
 void transferir(Conta conta_origem, Conta conta_destino, float valor){
-
+   if (valor > 0 && conta_origem.saldoTotal >= valor) {
+      for (int co = 0; co < contador_contas; co++) {  // co -> conta origem
+         if (contas[co].numero == conta_origem.numero) {
+            for (int cd = 0; cd < contador_contas; cd++) {  // cd -> conta destino
+               if (contas[cd].numero == conta_destino.numero) {
+                  if (contas[co].saldo >= valor) {
+                     contas[co].saldo -= valor;
+                     contas[cd].saldo -= valor;
+                     contas[co].saldoTotal = atualizaSaldoTotal(contas[co]);
+                     contas[cd].saldoTotal = atualizaSaldoTotal(contas[cd]);
+                     printf("Transferência realizada com sucesso!\n");
+                  }
+                  else {
+                     float restante = contas[co].saldo - valor;
+                     contas[co].limite = contas[co].limite + restante;
+                     contas[co].saldo = 0.0;
+                     contas[cd].saldo += valor;
+                     contas[co].saldoTotal = atualizaSaldoTotal(contas(co));
+                     contas[cd].saldoTotal = atualizaSaldoTotal(contas(cd));
+                     printf("Transferência realizada com sucesso!\n");
+                  }
+               }
+            }
+         }
+      }
+   }
+   else {
+      printf("Transferência não realizada. Tente novamente.\n");
+   }
 }
 
 void efetuarSaque(){
