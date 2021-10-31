@@ -103,11 +103,12 @@ void menu() {
 }
 
 void infoCliente(Cliente cliente){
-
+   printf("Código: %d \nNome: %s \nData de Nascimento: %s \nCadastro: %s\n", cliente.codigo, strtok(cliente.nome, "\n"), strtok(cliente.dataNascimento, "\n"), strtok(cliente.dataCadastro, "\n"));
+      
 }
 
 void infoConta(Conta conta){
-
+   printf("Número da conta: %d \nCliente: %s \nData Nascimento: %s \nData Cadastro: %s \nSaldo Total: %.2f\n", conta.numero, strtok(conta.cliente.nome, "\n"), strtok(conta.cliente.dataNascimento, "\n"), strtok(conta.cliente.dataCadastro, "\n"), conta.saldoTotal);
 }
 
 void criarConta(){
@@ -115,16 +116,44 @@ void criarConta(){
 }
 
 float atualizaSaldoTotal(Conta conta){
-
+   return conta.saldo + conta.limite;
 }
 
 
 Conta buscarContaPorNumero(int numero){
-
+   Conta c;
+   if (contador_contas > 0) {
+      for (int i = 0; i < contador_contas; i++) {
+         if (contas[i].numero == numero) {
+            c = contas[i];
+         }
+      }
+   }
+   return c;
 }
 
 void sacar(Conta conta, float valor){
-
+   if (valor > 0 && conta.saldoTotal >= valor) {
+      for (int i = 0; i < contador_contas; i++) {
+         if (contas[i].numero == conta.numero) {
+            if (contas[i].saldo >= valor) {
+               contas[i].saldo -= valor;
+               contas[i].saldoTotal = atualizaSaldoTotal(contas[i]);
+               printf("Saque efetuado com sucesso.\n");
+            }
+            else {
+               float restante = contas[i].saldo - valor;
+               contas[i].limite = contas[i].limite + restante;
+               contas[i].saldo = 0.0;
+               contas[i].saldoTotal = atualizaSaldoTotal(contas[i]);
+               printf("Saque efetuado com sucesso!\n");
+            }
+         }
+      }
+   }
+   else {
+      printf("Saque não realizado. Tente novamente.\n");
+   }
 }
 
 void depositar(Conta conta, float valor){
