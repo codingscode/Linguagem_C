@@ -6,6 +6,7 @@
 #include <time.h>
 
 
+
 typedef struct {
    int codigo;
    char nome[50];
@@ -171,6 +172,17 @@ void criarConta(){
    // Criar conta
    contas[contador_contas].numero = contador_contas + 1;
    contas[contador_contas].cliente = cliente;
+   contas[contador_contas].saldo = 0.0;
+   contas[contador_contas].limite = 0.0;
+   contas[contador_contas].saldoTotal = atualizaSaldoTotal(contas[contador_contas]);
+
+   printf("Conta criada com sucesso!\n\n");
+   printf("Dados da conta criada:\n");
+   infoConta(contas[contador_contas]);
+   contador_contas++;
+   
+   sleep(3);
+   menu();
 }
 
 float atualizaSaldoTotal(Conta conta){
@@ -262,18 +274,113 @@ void transferir(Conta conta_origem, Conta conta_destino, float valor){
 }
 
 void efetuarSaque(){
-
+   if (contador_contas > 0) {
+      int numero;
+      printf("Informe o número da conta: \n");
+      scanf("%d", &numero);
+      
+      Conta conta = buscarContaPorNumero(numero);
+      
+      if (conta.numero == numero) {
+         float valor;
+         printf("Informe o valor do saque:\n");
+         scanf("%f", &valor);
+         
+         sacar(conta, valor);
+      }
+      else {
+         printf("Não foi encontrada uma conta com o número %d\n", numero);
+      }
+      
+   }
+   else {
+      printf("Ainda não existem contas para saque.\n");
+   }
+   
+   sleep(2);
+   menu();
 }
 
 void efetuarDeposito(){
-
+   if (contador_contas > 0) {
+      int numero;
+      printf("Informe o número da conta: \n");
+      scanf("%d", &numero);
+      
+      Conta conta = buscarContaPorNumero(numero);
+      
+      if (conta.numero == numero) {
+         float valor;
+         printf("Informe o valor do depósito:\n");
+         scanf("%f", &valor);
+         
+         depositar(conta, valor);
+      }
+      else {
+         printf("Não foi encontrada uma conta com o número %d\n", numero);
+      }
+      
+   }
+   else {
+      printf("Ainda não existem contas para depósito.\n");
+   }
+   
+   sleep(2);
+   menu();
 }
-void efetuarTransferencia(){
 
+void efetuarTransferencia(){
+   if (contador_contas > 0) {
+      int numero_o, numero_d; // numero_o -> numero de origem, numero_d -> numero de destino   
+      printf("Informe o número da sua conta:\n");
+      scanf("%d", &numero_o);
+      
+      Conta conta_o = buscarContaPorNumero(numero_o);
+      
+      if (conta_o.numero == numero_o) {
+         printf("Informe o número da conta destino:\n");
+         scanf("%d", &numero_d);
+         
+         Conta conta_d = buscarContaPorNumero(numero_d);
+         
+         if (conta_d.numero == numero_d) {
+            float valor;
+            printf("Informe o valor para transferência: \n");
+            scanf("%f", &valor);
+            
+            transferir(conta_o, conta_d, valor);
+         }
+         else {
+            printf("A conta destino com número %d não foi encontrada.\n", numero_d);
+         }
+      }
+      else {
+         printf("A conta com número %d não foi encontrada.\n", numero_o);
+      }
+      
+   }
+   else {
+      printf("Ainda não existem contas para transferência.\n");
+   }
+   
+   sleep(2);
+   menu();
 }
 
 void listarContas(){
-
+   if (contador_contas > 0) {
+      for (int i = 0; i < contador_contas; i++) {
+         infoConta(contas[i]);
+         printf("\n");
+         sleep(1);
+      }
+   }
+   else {
+      printf("Não existem contas cadastradas ainda.\n");
+   }
+   
+   sleep(2);
+   menu();
 }
 
 
