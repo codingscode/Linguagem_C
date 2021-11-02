@@ -1,7 +1,19 @@
 #include <stdio.h>
 
+
+
 int main() {
-	printf("algo");
+	printf("algo\n");
+
+
+	printf("fim\n");
 	return 0;
 }
 
+
+/*
+algo
+fim
+
+
+*/

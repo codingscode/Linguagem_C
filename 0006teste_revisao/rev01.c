@@ -14,9 +14,6 @@ int main() {
 }
 
 /*
-qual a sua idade?:
-21
-sua idade é : 21
 
 
 */
