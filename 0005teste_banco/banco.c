@@ -249,7 +249,7 @@ void transferir(Conta conta_origem, Conta conta_destino, float valor){
                if (contas[cd].numero == conta_destino.numero) {
                   if (contas[co].saldo >= valor) {
                      contas[co].saldo -= valor;
-                     contas[cd].saldo -= valor;
+                     contas[cd].saldo += valor;
                      contas[co].saldoTotal = atualizaSaldoTotal(contas[co]);
                      contas[cd].saldoTotal = atualizaSaldoTotal(contas[cd]);
                      printf("Transferência realizada com sucesso!\n");
@@ -386,12 +386,243 @@ void listarContas(){
 
 
 
-
-
-
-
-
 /*
+===================================
+=============== ATM ===============
+============ Geek Bank ============
+===================================
+Selecione uma opção no menu:
+1 - Criar conta.
+2 - Efetuar saque.
+3 - Efetuar depósito.
+4 - Efetuar transferência.
+5 - Listar contas.
+6 - Sair.
+2
+Ainda não existem contas para saque.
+===================================
+=============== ATM ===============
+============ Geek Bank ============
+===================================
+Selecione uma opção no menu:
+1 - Criar conta.
+2 - Efetuar saque.
+3 - Efetuar depósito.
+4 - Efetuar transferência.
+5 - Listar contas.
+6 - Sair.
+3
+Ainda não existem contas para depósito.
+===================================
+=============== ATM ===============
+============ Geek Bank ============
+===================================
+Selecione uma opção no menu:
+1 - Criar conta.
+2 - Efetuar saque.
+3 - Efetuar depósito.
+4 - Efetuar transferência.
+5 - Listar contas.
+6 - Sair.
+4
+Ainda não existem contas para transferência.
+===================================
+=============== ATM ===============
+============ Geek Bank ============
+===================================
+Selecione uma opção no menu:
+1 - Criar conta.
+2 - Efetuar saque.
+3 - Efetuar depósito.
+4 - Efetuar transferência.
+5 - Listar contas.
+6 - Sair.
+5
+Não existem contas cadastradas ainda.
+===================================
+=============== ATM ===============
+============ Geek Bank ============
+===================================
+Selecione uma opção no menu:
+1 - Criar conta.
+2 - Efetuar saque.
+3 - Efetuar depósito.
+4 - Efetuar transferência.
+5 - Listar contas.
+6 - Sair.
+1
+Informe os dados do cliente:
+Nome do cliente:
+aladin salim
+E-mail do cliente:
+aladin@gmail.com
+CPF do cliente:
+111678333
+Data de nascimento do cliente:
+03/08/2018
+Conta criada com sucesso!
+
+Dados da conta criada:
+Número da conta: 1
+Cliente: aladin salim
+Data Nascimento: 03/08/2018
+Data Cadastro: 02/11/2021
+Saldo Total: 0.00
+===================================
+=============== ATM ===============
+============ Geek Bank ============
+===================================
+Selecione uma opção no menu:
+1 - Criar conta.
+2 - Efetuar saque.
+3 - Efetuar depósito.
+4 - Efetuar transferência.
+5 - Listar contas.
+6 - Sair.
+1
+Informe os dados do cliente:
+Nome do cliente:
+mel
+E-mail do cliente:
+mel@gmail.com
+CPF do cliente:
+666126733
+Data de nascimento do cliente:
+11/09/2019
+Conta criada com sucesso!
+
+Dados da conta criada:
+Número da conta: 2
+Cliente: mel
+Data Nascimento: 11/09/2019
+Data Cadastro: 02/11/2021
+Saldo Total: 0.00
+===================================
+=============== ATM ===============
+============ Geek Bank ============
+===================================
+Selecione uma opção no menu:
+1 - Criar conta.
+2 - Efetuar saque.
+3 - Efetuar depósito.
+4 - Efetuar transferência.
+5 - Listar contas.
+6 - Sair.
+1
+Informe os dados do cliente:
+Nome do cliente:
+apolo
+E-mail do cliente:
+apolo@hotmail.com
+CPF do cliente:
+777538955
+Data de nascimento do cliente:
+08/06/2011
+Conta criada com sucesso!
+
+Dados da conta criada:
+Número da conta: 3
+Cliente: apolo
+Data Nascimento: 08/06/2011
+Data Cadastro: 02/11/2021
+Saldo Total: 0.00
+===================================
+=============== ATM ===============
+============ Geek Bank ============
+===================================
+Selecione uma opção no menu:
+1 - Criar conta.
+2 - Efetuar saque.
+3 - Efetuar depósito.
+4 - Efetuar transferência.
+5 - Listar contas.
+6 - Sair.
+3
+Informe o número da conta:
+1
+Informe o valor do depósito:
+1000
+Depósito efetuado com sucesso!
+===================================
+=============== ATM ===============
+============ Geek Bank ============
+===================================
+Selecione uma opção no menu:
+1 - Criar conta.
+2 - Efetuar saque.
+3 - Efetuar depósito.
+4 - Efetuar transferência.
+5 - Listar contas.
+6 - Sair.
+3
+Informe o número da conta:
+2
+Informe o valor do depósito:
+600
+Depósito efetuado com sucesso!
+===================================
+=============== ATM ===============
+============ Geek Bank ============
+===================================
+Selecione uma opção no menu:
+1 - Criar conta.
+2 - Efetuar saque.
+3 - Efetuar depósito.
+4 - Efetuar transferência.
+5 - Listar contas.
+6 - Sair.
+4
+Informe o número da sua conta:
+1
+Informe o número da conta destino:
+3
+Informe o valor para transferência:
+300
+Transferência realizada com sucesso!
+===================================
+=============== ATM ===============
+============ Geek Bank ============
+===================================
+Selecione uma opção no menu:
+1 - Criar conta.
+2 - Efetuar saque.
+3 - Efetuar depósito.
+4 - Efetuar transferência.
+5 - Listar contas.
+6 - Sair.
+5
+Número da conta: 1
+Cliente: aladin salim
+Data Nascimento: 03/08/2018
+Data Cadastro: 02/11/2021
+Saldo Total: 700.00
+
+Número da conta: 2
+Cliente: mel
+Data Nascimento: 11/09/2019
+Data Cadastro: 02/11/2021
+Saldo Total: 600.00
+
+Número da conta: 3
+Cliente: apolo
+Data Nascimento: 08/06/2011
+Data Cadastro: 02/11/2021
+Saldo Total: 300.00
+
+===================================
+=============== ATM ===============
+============ Geek Bank ============
+===================================
+Selecione uma opção no menu:
+1 - Criar conta.
+2 - Efetuar saque.
+3 - Efetuar depósito.
+4 - Efetuar transferência.
+5 - Listar contas.
+6 - Sair.
+6
+
+Até a próxima!
 
 
 
