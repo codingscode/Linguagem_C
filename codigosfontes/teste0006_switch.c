@@ -10,7 +10,7 @@ int main() {
 
 	switch(valor) {
 	   case 1:
-	      printf("domigo");
+	      printf("domigo\n");
 	      break;
 	   case 2:
 	      printf("segunda\n");

@@ -6,6 +6,8 @@
 int main() {
    int numero, soma = 0;
 
+   printf("numero: %d\n", numero);
+
    do {
       printf("digite um número diferente de 0:\n");
 	  scanf("%d", &numero);
@@ -28,6 +30,7 @@ int main() {
 */
 
 /*
+numero: -107410656
 digite um número diferente de 0:
 1
 digite um número diferente de 0:
