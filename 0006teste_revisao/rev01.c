@@ -1,21 +1,25 @@
 #include <stdio.h>
 
+/*
+tipos alfanumericos:
+- caractere: 'a'
+- string*: "asfdhadsfh12"
 
+
+na linguagem c não existe o tipo string
+
+"algumacoisa\0"
+ */
 
 
 int main() {
-   int numero, soma = 0;
+   char caract;
 
-   printf("numero: %d\n", numero);
+   printf("digite um número:\n");
+   gets(caract);
 
-   do {
-      printf("digite um número diferente de 0:\n");
-	  scanf("%d", &numero);
 
-	  soma += numero;
-   } while (numero != 0);
-
-   printf("soma: %d", soma);
+   printf("caract: %s\n", caract);
 
 
    return 0;
@@ -24,22 +28,19 @@ int main() {
 
 
 /*
-numero: -107410656
-digite um número diferente de 0:
-1
-digite um número diferente de 0:
-2
-digite um número diferente de 0:
-3
-digite um número diferente de 0:
-0
-soma: 6
+qual o seu nome?
+aladin
+seu nome é aladin .
+cor dos olhos:
+marrom
+cor dos olhos: marrom
+
+
 
 
 
 
 */
-
 
 
 
