@@ -1,68 +1,65 @@
 #include <stdio.h>
 
-
 /*
-matrizes parte 1
+escrevendo funções
 
 
-array multi-dimensional
-
-char array[3][4]
 
 */
 
+// sem retorno
+void imprimir() {
+   printf("estou imprimindo...\n");
+}
+
+// com retorno
+char* imprimir2() {
+   return "o retorno...";
+}
+
+int somar(int numero1, int numero2) {
+   return numero1 + numero2;
+}
+
+char caractere(char caract) {
+   return caract;
+}
+
+char* imprimir_string(char* a_string) {
+   return a_string;
+}
 
 int main() {
-   char nome[3][50];
 
-   for (int i = 0; i < 3; i++) {
-      printf("qual seu nome?\n");
-      gets(nome[i]);
-   }
+   printf("1: alguma coisa...\n");
+   imprimir();
+   printf("3: %s \n", imprimir2());
+   printf("4: %d \n", somar(2, 3));
+   printf("5: caractere passado: %c \n", caractere('k'));
+   printf("6: %s\n", imprimir_string("borboleta"));
 
-   printf("\n");
+   char* outra = "imprimindo outra...";
 
-   for (int i=0; i < 3; i++) {
-      printf("Olá %s \n", nome[i]);
-   }
-
-   printf("\n");
-
-   char cores[3][12] = {"azul", "verde", "vermelho"};
-
-   for (int i = 0; i < 3; i++) {
-      printf("cor %d: %s\n", i+1, cores[i]);
-   }
+   printf("+: %s\n", outra);
+   printf("%c\n", outra[0]);
+   printf("%c\n", outra[1]);
 
    return 0;
 }
 
 
 
-
-
 /*
-qual seu nome?
-samuel
-qual seu nome?
-israel
-qual seu nome?
-deborah
-
-Olá samuel
-Olá israel
-Olá deborah
-
-cor 1: azul
-cor 2: verde
-cor 3: vermelho
-
-
-
+1: alguma coisa...
+estou imprimindo...
+3: o retorno...
+4: 5
+5: caractere passado: k
+6: borboleta
++: imprimindo outra...
+i
+m
 
 
 
 */
-
-
-

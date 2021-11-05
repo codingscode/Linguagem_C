@@ -1,8 +1,19 @@
 #include <stdio.h>
 
 /*
-
-
+decimal  |  binario
+-----------------------
+0        |  00000
+1        |  00001
+2        |  00010   *
+3        |  00011
+4        |  00100
+5        |  00101
+6        |  00110
+7        |  00111
+8        |  01000
+9        |  01001
+10       |  01010
 
 */
 
@@ -30,11 +41,9 @@ int main() {
 }
 
 
-
 /*
- no terminal do arquivo usar:
-     gcc arquivo.c -o saida.o -lm
-     ./saida.o
+
+
 */
 
 /*
@@ -48,5 +57,8 @@ valor decimal: -3
 
 
 
+
 */
+
+
 

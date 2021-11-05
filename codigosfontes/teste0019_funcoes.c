@@ -25,13 +25,24 @@ char caractere(char caract) {
    return caract;
 }
 
+char* imprimir_string(char* a_string) {
+   return a_string;
+}
+
 int main() {
 
-   printf("alguma coisa...\n");
+   printf("1: alguma coisa...\n");
    imprimir();
-   printf("%s \n", imprimir2());
-   printf("%d \n", somar(2, 3));
-   printf("caractere passado: %c \n", caractere('k'));
+   printf("3: %s \n", imprimir2());
+   printf("4: %d \n", somar(2, 3));
+   printf("5: caractere passado: %c \n", caractere('k'));
+   printf("6: %s\n", imprimir_string("borboleta"));
+
+   char* outra = "imprimindo outra...";
+
+   printf("+: %s\n", outra);
+   printf("%c\n", outra[0]);
+   printf("%c\n", outra[1]);
 
    return 0;
 }
@@ -39,17 +50,17 @@ int main() {
 
 
 /*
- no terminal do arquivo usar:
-     gcc arquivo.c -o saida.o -lm
-     ./saida.o
-*/
-
-/*
-alguma coisa...
+1: alguma coisa...
 estou imprimindo...
-o retorno...
-5
-caractere passado: k
+3: o retorno...
+4: 5
+5: caractere passado: k
+6: borboleta
++: imprimindo outra...
+i
+m
+
+
 
 
 
