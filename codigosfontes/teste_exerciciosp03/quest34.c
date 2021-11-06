@@ -9,7 +9,7 @@ int main() {
     scanf("%lf", &raio);
     area = 3.14*pow(raio, 2.0);
 
-    printf("raio: %lf, area: %lf \n", raio, area);
+    printf("raio: %.2lf, area: %.2lf \n", raio, area);
 
 
 	return 0;
@@ -29,7 +29,8 @@ int main() {
 /*
 digite valor de raio:
 4
-raio: 4.000000, area: 50.240000
+raio: 4.00, area: 50.24
+
 
 
 */

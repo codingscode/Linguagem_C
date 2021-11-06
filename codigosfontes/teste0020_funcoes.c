@@ -36,7 +36,7 @@ int main() {
    printf("%s \n", imprimir2());
    printf("%d \n", somar(2, 3));
    printf("caractere passado: %c \n", caractere('k'));
-   printf("caractere passado: %c \n", caractere(102));
+   printf("caractere passado: %c \n", caractere(102));  // tabela ascii
 
    int soma2 = somar(3, 5);
    printf("som2: %d \n", soma2);

@@ -10,7 +10,7 @@ int main() {
 	scanf("%lf", &num1);
 	quadrado = pow(num1, 2.0);
 
-	printf("o quadrado dele é : %lf \n", quadrado);
+	printf("o quadrado dele é : %.2lf \n", quadrado);
 	return 0;
 
 	/*
@@ -27,8 +27,9 @@ int main() {
 
 /*
 digite um número:
-4
-o quadrado dele é : 16.000000
+8
+o quadrado dele é : 64.00
+
 
 
 */
