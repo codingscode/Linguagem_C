@@ -3,7 +3,7 @@
 
 
 
-void reverter(char*, int, int);
+void reverter(char*, int, int);  // string, inteiro, inteiro
 
 int main() {
     char string[20];
@@ -19,11 +19,12 @@ int main() {
     reverter(string, 0, strlen(string)-1);
     printf("número %d invertido é %s\n", inteiro, string);
 
-    printf("%c\n", ('f'+ 1));
-    printf("%c\n", ('3'+ 1));
-    printf("%s\n", ("62734"+ 1));
-    printf("%s\n", ("62734"+ 2));
-    printf("%s\n", ("62734"+ 3));
+    printf("%c\n", 'f'+ 1);
+    printf("%c\n", '3'+ 1);
+    printf("%s\n", "62734"+ 0); // 62734
+    printf("%s\n", "62734"+ 1); // 2734
+    printf("%s\n", "62734"+ 2); // 734
+    printf("%s\n", "62734"+ 3); // 34
 
 	return 0;
 
@@ -68,11 +69,10 @@ x: 54321, inicio: 2, fim: 2
 número 12345 invertido é 54321
 g
 4
+62734
 2734
 734
 34
-
-
 
 
 

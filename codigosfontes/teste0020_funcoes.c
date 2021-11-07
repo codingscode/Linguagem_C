@@ -2,9 +2,6 @@
 
 /*
 escrevendo funções 2
-
-
-
 */
 
 // sem retorno
@@ -62,10 +59,4 @@ caractere passado: k
 caractere passado: f
 som2: 8
 imprimindo outra string: sua string
-
-
-
-
-
 */
-

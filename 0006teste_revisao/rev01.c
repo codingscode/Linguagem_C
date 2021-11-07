@@ -1,90 +1,41 @@
 #include <stdio.h>
-#include <string.h>
+#include <math.h>
 
 
-
-void reverter(char*, int, int);
 
 int main() {
-    char string[20];
-    int inteiro;
 
-    printf("digite um número inteiro:\n");
-    scanf("%d", &inteiro);
-    sprintf(string, "%d", inteiro);
+    int numero;
 
-    printf("string: %s\n", string);
+    printf("digite um número: \n");
+    scanf("%d", &numero);
 
+    if (numero > 0) {
+    	printf("%d ^ 2 é %.2lf \n", numero, pow(numero, 2));
+    	printf("%d ^ 0.5 é %.2lf \n", numero, pow(numero, 0.5));
+    }
+    else {
+    	printf("%d é negativo \n", numero);
+    }
 
-    reverter(string, 0, strlen(string)-1);
-    printf("número %d invertido é %s\n", inteiro, string);
-
-    printf("%c\n", ('f'+ 1));
-    printf("%c\n", ('3'+ 1));
-    printf("%s\n", ("62734"+ 1));
-    printf("%s\n", ("62734"+ 2));
-    printf("%s\n", ("62734"+ 3));
-
-	return 0;
-
-	/*
-     no terminal do arquivo usar:
-        gcc quest04.c -o saida.o -lm
-        ./saida.o
-	 */
-
+    return 0;
 }
-
-void reverter(char *x, int inicio, int fim) {
-   char c;
-   printf("x: %s, inicio: %d, fim: %d\n", x, inicio, fim);
-
-   if (inicio >= fim)
-      return;
-
-   c = *(x + inicio);
-   printf("c: %c\n", c);
-   *(x + inicio) = *(x + fim);
-   printf("x: %s\n", x);
-   *(x + fim) = c;
-
-   reverter(x, ++inicio, --fim);
-}
-
 
 
 
 /*
-digite um número inteiro:
-12345
-string: 12345
-x: 12345, inicio: 0, fim: 4
-c: 1
-x: 52345
-x: 52341, inicio: 1, fim: 3
-c: 2
-x: 54341
-x: 54321, inicio: 2, fim: 2
-número 12345 invertido é 54321
-g
-4
-2734
-734
-34
+ no terminal do arquivo usar:
+     gcc quest04.c -o saida.o -lm
+     ./saida.o
+*/
 
-
-
+/*
+digite um número:
+6
+6 ^ 2 é 36.00
+6 ^ 0.5 é 2.45
 
 
 
 */
 
-/*
-x = "284" inicio = 0 fim = 2
-c = 284
-x + fim = 284
-
-x = 284 inicio = 1 fim = 1
-
-
-*/

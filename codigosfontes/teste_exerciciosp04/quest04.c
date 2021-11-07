@@ -11,8 +11,8 @@ int main() {
     scanf("%d", &numero);
 
     if (numero > 0) {
-    	printf("%d ^ 2 é %lf \n", numero, pow(numero, 2));
-    	printf("%d ^ 0.5 é %lf \n", numero, pow(numero, 0.5));
+    	printf("%d ^ 2 é %.2lf \n", numero, pow(numero, 2));
+    	printf("%d ^ 0.5 é %.2lf \n", numero, pow(numero, 0.5));
     }
     else {
     	printf("%d é negativo \n", numero);
@@ -32,8 +32,9 @@ int main() {
 /*
 digite um número:
 6
-6 ^ 2 é 36.000000
-6 ^ 0.5 é 2.449490
+6 ^ 2 é 36.00
+6 ^ 0.5 é 2.45
+
 
 
 */
