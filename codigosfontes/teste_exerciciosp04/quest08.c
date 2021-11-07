@@ -29,9 +29,9 @@ int main() {
       soma += notas[i];
    }
 
-   printf("nota 1: %f\n", notas[0]);
-   printf("nota 2: %f\n", notas[1]);
-   printf("media: %f\n", soma/2);
+   printf("nota 1: %.2f\n", notas[0]);
+   printf("nota 2: %.2f\n", notas[1]);
+   printf("media: %.2f\n", soma/2);
 
    return 0;
 }
@@ -49,9 +49,10 @@ digite nota 1:
 7
 digite nota 2:
 9
-nota 1: 7.000000
-nota 2: 9.000000
-media: 8.000000
+nota 1: 7.00
+nota 2: 9.00
+media: 8.00
+
 
 
 
