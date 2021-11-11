@@ -13,25 +13,31 @@ void tipo_triangulo(int a, int b, int c) {
       printf("%s\n", tipo);
    }
    else if ((a == b) | (a == c) | (b == c)) {
-	   strcat(tipo, "isosceles");
-	   printf("%s\n", tipo);
+	  strcat(tipo, "isosceles");
+	  printf("%s\n", tipo);
    }
    else if (a != b && a != c && b != c) {
-	   strcat(tipo, "escaleno");
-	   printf("%s\n", tipo);
+	  strcat(tipo, "escaleno");
+	  printf("%s\n", tipo);
    }
 
    printf("executou.\n");
 }
 
 
-int soma_lados(int lado1, int lado2, int lado3) {  // verifica se é um triangulo válido
-   int resp = 0;
+char* soma_lados(int lado1, int lado2, int lado3) {  // verifica se é um triangulo válido
+   char resp[30] = "";
 
    if (lado1 < lado2 + 3 && lado2 < lado1 + lado2 && lado3 < lado1 + lado2) {
-      resp = 1;
+      //resp = 1;
+      strcat(resp, "triangulo válido.");
+
       tipo_triangulo(lado1, lado2, lado3);
-      return resp;
+      //return resp;
+   }
+   else {
+      strcat(resp, "triangulo não válido.");
+
    }
 
    return resp;
@@ -45,7 +51,7 @@ int main() {
    printf("digite os valores de lado a, lado b, lado c, um abaixo do outro:\n");
    scanf("%d %d %d", &ladoa, &ladob, &ladoc);
 
-   printf("%d\n", soma_lados(ladoa, ladob, ladoc));
+   printf("%s .\n", soma_lados(ladoa, ladob, ladoc));
 
    printf("fim\n");
 
