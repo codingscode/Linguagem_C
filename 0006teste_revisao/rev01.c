@@ -6,12 +6,19 @@
 
 
 void tipo_triangulo(int a, int b, int c) {
-   char tipo;
+   char tipo[16] = "";
 
    if (a == b && a == c) {
-      sprintf(tipo, "%c", 'e');
-      puts(tipo);
-
+      strcat(tipo, "equilatero");
+      printf("%s\n", tipo);
+   }
+   else if ((a == b) | (a == c) | (b == c)) {
+	   strcat(tipo, "isosceles");
+	   printf("%s\n", tipo);
+   }
+   else if (a != b && a != c && b != c) {
+	   strcat(tipo, "escaleno");
+	   printf("%s\n", tipo);
    }
 
    printf("executou.\n");
