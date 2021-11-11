@@ -56,6 +56,46 @@ int main() {
 
 
 /*
+digite os valores de lado a, lado b, lado c, um abaixo do outro:
+3
+3
+3
+equilatero
+executou.
+triangulo válido .
+fim
+
+
+
+digite os valores de lado a, lado b, lado c, um abaixo do outro:
+3
+3
+2
+isosceles
+executou.
+triangulo válido .
+fim
+
+
+
+digite os valores de lado a, lado b, lado c, um abaixo do outro:
+3
+4
+5
+escaleno
+executou.
+triangulo válido .
+fim
+
+
+
+
+digite os valores de lado a, lado b, lado c, um abaixo do outro:
+2
+2
+1000
+triangulo inválido .
+fim
 
 
 
