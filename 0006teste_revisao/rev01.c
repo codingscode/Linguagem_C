@@ -26,27 +26,23 @@ void tipo_triangulo(int a, int b, int c) {
 
 
 char* soma_lados(int lado1, int lado2, int lado3) {  // verifica se é um triangulo válido
-   char resp[30] = "";
+   char* resp;
 
    if (lado1 < lado2 + 3 && lado2 < lado1 + lado2 && lado3 < lado1 + lado2) {
-      //resp = 1;
-      strcat(resp, "triangulo válido.");
+      sprintf(resp, "triangulo válido");
 
       tipo_triangulo(lado1, lado2, lado3);
-      //return resp;
    }
    else {
-      strcat(resp, "triangulo não válido.");
+	  sprintf(resp, "triangulo inválido");
 
    }
-
    return resp;
 }
 
 
 int main() {
    int ladoa, ladob, ladoc;
-   //char tipo_triangulo[16];
 
    printf("digite os valores de lado a, lado b, lado c, um abaixo do outro:\n");
    scanf("%d %d %d", &ladoa, &ladob, &ladoc);
