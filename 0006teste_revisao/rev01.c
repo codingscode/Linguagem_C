@@ -4,50 +4,28 @@
 #include <math.h>
 
 
-
-void tipo_triangulo(int a, int b, int c) {
-   char tipo[16] = "";
-
-   if (a == b && a == c) {
-      strcat(tipo, "equilatero");
-      printf("%s\n", tipo);
-   }
-   else if ((a == b) | (a == c) | (b == c)) {
-	  strcat(tipo, "isosceles");
-	  printf("%s\n", tipo);
-   }
-   else if (a != b && a != c && b != c) {
-	  strcat(tipo, "escaleno");
-	  printf("%s\n", tipo);
-   }
-
-   printf("executou.\n");
-}
+char* aposentar(int i, int t) {
+   char* situacao;
 
 
-char* soma_lados(int lado1, int lado2, int lado3) {  // verifica se é um triangulo válido
-   char* resp;
-
-   if (lado1 < lado2 + 3 && lado2 < lado1 + lado2 && lado3 < lado1 + lado2) {
-      sprintf(resp, "triangulo válido");
-
-      tipo_triangulo(lado1, lado2, lado3);
+   if ((i >= 65) | (t >= 30) | (i >= 60 && t >= 25)) {
+      sprintf(situacao, "se aposenta");
    }
    else {
-	  sprintf(resp, "triangulo inválido");
-
+      sprintf(situacao, "não aposenta");
+      printf("testou\n");
    }
-   return resp;
+   return situacao;
 }
 
 
 int main() {
-   int ladoa, ladob, ladoc;
+   int idade, t_serv;
 
-   printf("digite os valores de lado a, lado b, lado c, um abaixo do outro:\n");
-   scanf("%d %d %d", &ladoa, &ladob, &ladoc);
+   printf("digite a idade e o tempo de serviço um abaixo do outro:\n");
+   scanf("%d %d", &idade, &t_serv);
 
-   printf("%s .\n", soma_lados(ladoa, ladob, ladoc));
+   printf("situacao: %s.\n", aposentar(idade, t_serv));
 
    printf("fim\n");
 
@@ -56,45 +34,36 @@ int main() {
 
 
 /*
-digite os valores de lado a, lado b, lado c, um abaixo do outro:
-3
-3
-3
-equilatero
-executou.
-triangulo válido .
-fim
-
-
-
-digite os valores de lado a, lado b, lado c, um abaixo do outro:
-3
-3
-2
-isosceles
-executou.
-triangulo válido .
-fim
-
-
-
-digite os valores de lado a, lado b, lado c, um abaixo do outro:
-3
+digite a idade e o tempo de serviço um abaixo do outro:
+23
 4
-5
-escaleno
-executou.
-triangulo válido .
+testou
+situacao: não aposenta.
 fim
 
 
 
+digite a idade e o tempo de serviço um abaixo do outro:
+40
+20
+testou
+situacao: não aposenta.
+fim
 
-digite os valores de lado a, lado b, lado c, um abaixo do outro:
-2
-2
-1000
-triangulo inválido .
+
+
+digite a idade e o tempo de serviço um abaixo do outro:
+59
+40
+situacao: se aposenta.
+fim
+
+
+
+digite a idade e o tempo de serviço um abaixo do outro:
+67
+15
+situacao: se aposenta.
 fim
 
 
