@@ -2,34 +2,39 @@
 #include <string.h>
 #include <stdlib.h>
 #include <math.h>
-
+#include <time.h>
 
 
 
 int main() {
-   float distancia, litros, razao;
-   char* mensagem;
+   //int n;
 
-   printf("digite a distancia(Km) percorrida e quantidade de litros de gasolina uma abaixo do outro:\n");
-   scanf("%f %f", &distancia, &litros);
+   //n = rand() % 3 + 1;
 
-   razao = distancia/litros;
+   //printf("%d\n", n);
 
-   printf("%.2f\n", razao);
+   //time_t t;
 
-   if (razao < 8) {
-      sprintf(mensagem, "venda o carro.\n");
-      printf("%s\n", mensagem);
+
+   /* Intializes random number generator */
+   srand(time(0));
+
+   //int numero = 0;
+
+	int numero = rand() % 10;
+	printf("numero fora: %d\n", numero);
+
+   while (numero != 3) {
+      numero = rand() % 10; // 0 até 2
+      printf("numero: %d\n", numero);
    }
-   else if (razao >=8 && razao < 14) {
-	  sprintf(mensagem, "economico.\n");
-	  printf("%s\n", mensagem);
-   }
-   else if (razao > 12) {
-	  sprintf(mensagem, "super economico.\n");
-	  printf("%s\n", mensagem);
-   }
 
+
+
+
+   //printf("%d\n", rand() % 3);
+   //printf("%d\n", rand() % 3);
+   //printf("%d\n", rand() % 3);
 
    printf("fim\n");
    return 0;
@@ -38,32 +43,9 @@ int main() {
 
 /*
 
-digite a distancia(Km) percorrida e quantidade de litros de gasolina uma abaixo do outro:
-28
-4
-7.00
-venda o carro.
-
-fim
-
-
-digite a distancia(Km) percorrida e quantidade de litros de gasolina uma abaixo do outro:
-38
-4
-9.50
-economico.
-
-fim
 
 
 
-digite a distancia(Km) percorrida e quantidade de litros de gasolina uma abaixo do outro:
-75
-5
-15.00
-super economico.
-
-fim
 
 
 
