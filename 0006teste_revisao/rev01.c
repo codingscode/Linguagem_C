@@ -11,8 +11,6 @@ int main() {
    int temporario = 0;
    int teste[3] = {1, 2, 3};
    int numeros[3];
-   int ordenado[0];
-   int ref = -300;
 
 
    printf("digite tres numeros inteiros um abaixo do outro:\n");
@@ -22,7 +20,7 @@ int main() {
       printf("%dº numero: %d\n", i+1, numeros[i]);
    }
 
-   int comp_numeros = sizeof(numeros)/sizeof(int);
+   long int comp_numeros = sizeof(numeros)/sizeof(int);
 
    printf("comprimento de numeros: %ld\n", comp_numeros);
 
@@ -48,25 +46,6 @@ int main() {
 
    printf("\n");
 
-
-
-
-   /*
-   for (int i = 0; i < 3; i++) {
-      if (ref < numeros[i]) {
-         ref = &numeros[i];
-      }
-
-
-   }
-
-
-
-
-
-
-
-   */
 
    printf("fim\n");
    return 0;
