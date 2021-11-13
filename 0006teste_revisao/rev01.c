@@ -7,37 +7,64 @@
 
 
 int main() {
+   // 3, 8, 5
+   int temporario = 0;
+   int teste[3] = {1, 2, 3};
+   int numeros[3];
+   int ordenado[0];
+   int ref = -300;
 
-   srand(time(0));
 
-   int a, b, soma, acertos = 0, resposta;
+   printf("digite tres numeros inteiros um abaixo do outro:\n");
+   scanf("%d %d %d", &numeros[0], &numeros[1], &numeros[2]);
 
-
-
-   for (int i = 0; i < 5; i++) {
-      a = rand() % 100 + 1;
-      b = rand() % 100 + 1;
-      soma = a + b;
-      printf("%d + %d = ?\n", a, b);
-      scanf("%d", &resposta);
-      if (resposta == soma) {
-         acertos += 1;
-      }
-      printf("resposta: %d\n\n", soma);
+   for (int i=0; i < 3; i++) {
+      printf("%dº numero: %d\n", i+1, numeros[i]);
    }
 
-   printf("acertos: %d\n", acertos);
+   int comp_numeros = sizeof(numeros)/sizeof(int);
+
+   printf("comprimento de numeros: %ld\n", comp_numeros);
+
+
+   // ordenando o vetor em ordem crescente
+   for (int i = 0; i < comp_numeros; i++) {
+      for (int j = i+1; j < comp_numeros; j++) {
+         if(numeros[i] > numeros[j]) {
+            temporario = numeros[i];
+            numeros[i] = numeros[j];
+            numeros[j] = temporario;
+         }
+      }
+   }
+
+   printf("\n");
+
+   // mostrando elementos do vetor depois de ordenado
+   printf("elementos do vetor em ordem crescente:\n");
+   for (int i = 0; i < comp_numeros; i++) {
+      printf("%d ", numeros[i]);
+   }
+
+   printf("\n");
+
 
 
 
    /*
-   int numero = rand() % 10 + 1; // 1 até 9
-   printf("numero fora: %d\n", numero);
+   for (int i = 0; i < 3; i++) {
+      if (ref < numeros[i]) {
+         ref = &numeros[i];
+      }
 
-   while (numero != 0) {
-      numero = rand() % 10 + 1; // 1 até 9
-      printf("numero: %d\n", numero);
+
    }
+
+
+
+
+
+
 
    */
 
@@ -45,24 +72,24 @@ int main() {
    return 0;
 }
 
-/*
-   srand(time(0));
 
-
-   int numero = rand() % 10; // 0 até 9
-   printf("numero fora: %d\n", numero);
-
-   while (numero != 0) {
-      numero = rand() % 10; // 0 até 9
-      printf("numero: %d\n", numero);
-   }
-
-
-   printf("fim\n");
-   return 0;
-*/
 
 /*
+
+digite tres numeros inteiros um abaixo do outro:
+10
+2
+8
+1º numero: 10
+2º numero: 2
+3º numero: 8
+comprimento de numeros: 3
+
+elementos do vetor em ordem crescente:
+2 8 10
+fim
+
+
 
 
 
