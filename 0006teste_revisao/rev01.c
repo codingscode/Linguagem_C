@@ -11,6 +11,8 @@ int main() {
 	int tam_ini = strlen(chegada);
 	char delim[] = ":";
 
+    int chegadint[] = {0, 0, 0};
+
 	char *ptr = strtok(chegada, delim);
 
 	while(ptr != NULL) {
@@ -18,12 +20,19 @@ int main() {
 		ptr = strtok(NULL, delim);
 	}
 
-	/* This loop will show that there are zeroes in the str after tokenizing */
 	for (int i = 0; i < tam_ini; i++) {
-		printf("%d ", chegada[i]); /* Convert the character to integer, in this case
-							   the character's ASCII equivalent */
+		printf("%d ", chegada[i] - 48);
+
 	}
 	printf("\n");
+
+    chegadint[0] = (chegada[0] - 48)*10 + chegada[1] - 48;
+    chegadint[1] = (chegada[3] - 48)*10 + chegada[4] - 48;
+    chegadint[2] = (chegada[6] - 48)*10 + chegada[7] - 48;
+
+    for (int i = 0; i < 3; i++) {
+       printf("%dº: %d\n", i+1, chegadint[i]);
+    }
 
 	return 0;
 }
@@ -89,12 +98,29 @@ printf("numero: %d\n", numero);
 
 
 
+*/
 
-
-
-
-
-
+/*
+'10'
+'13'
+'25'
+1 0 -48 1 3 -48 2 5
 
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
