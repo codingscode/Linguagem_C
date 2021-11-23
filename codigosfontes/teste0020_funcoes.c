@@ -37,7 +37,9 @@ int main() {
 
    int soma2 = somar(3, 5);
    printf("som2: %d \n", soma2);
-   printf("imprimindo outra string: %s", imprimir_string2("sua string"));
+   printf("imprimindo outra string: %s\n", imprimir_string2("sua string"));
+
+   printf("fim.\n");
 
    return 0;
 }
@@ -59,4 +61,6 @@ caractere passado: k
 caractere passado: f
 som2: 8
 imprimindo outra string: sua string
+fim.
+
 */

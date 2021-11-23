@@ -33,7 +33,7 @@ int main() {
 
    printf("\n----------------\n");
    printf("endereço valores[0]: %p\n", &(valores[0]));
-   printf("endereço valores: %p\n", &valores);
+   printf("endereço valores:    %p\n", &valores);
    printf("valores: %d\n", valores);
 
    return 0;
