@@ -11,7 +11,7 @@ int = 4 bytes
 
 
 int main() {
-   int numeros[5] = { 7, 8, 9, 10, 11 };
+   int numeros[5] = { 10, 2, 15, 80, 1 };
 
    for (int i = 0; i < 5; i++) {
       printf("o tamanho de %d é %ld bytes. seu endereço é %p . \n", numeros[i], sizeof(numeros[i]), &(numeros[i]));
@@ -34,23 +34,15 @@ int main() {
 */
 
 /*
-o tamanho de 7 é 4 bytes. seu endereço é 0x7ffc5ebb85e0 .
-o tamanho de 8 é 4 bytes. seu endereço é 0x7ffc5ebb85e4 .
-o tamanho de 9 é 4 bytes. seu endereço é 0x7ffc5ebb85e8 .
-o tamanho de 10 é 4 bytes. seu endereço é 0x7ffc5ebb85ec .
-o tamanho de 11 é 4 bytes. seu endereço é 0x7ffc5ebb85f0 .
+o tamanho de 10 é 4 bytes. seu endereço é 0x7fff50c02100 .
+o tamanho de 2 é 4 bytes. seu endereço é 0x7fff50c02104 .
+o tamanho de 15 é 4 bytes. seu endereço é 0x7fff50c02108 .
+o tamanho de 80 é 4 bytes. seu endereço é 0x7fff50c0210c .
+o tamanho de 1 é 4 bytes. seu endereço é 0x7fff50c02110 .
 o array numeros possui 20 bytes .
-*(numeros) vale 7 e endereço de memoria é 0x7.
-*(numeros+1) vale 8 e endereço de memoria é 0x8.
-*(numeros+2) vale 9 e endereço de memoria é 0x9.
-
-
-
-
-
-
-
-
+*(numeros) vale 10 e endereço de memoria é 0xa.
+*(numeros+1) vale 2 e endereço de memoria é 0x2.
+*(numeros+2) vale 15 e endereço de memoria é 0xf.
 
 
 
