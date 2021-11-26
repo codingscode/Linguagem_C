@@ -35,7 +35,7 @@ int main() {
 
       printf("informe o email do contato:\n");
       fgets(agenda.contatos[i].email, 100, stdin);
-
+      printf("\n");
    }
 
    for (int i = 0; i < 2; i++) {

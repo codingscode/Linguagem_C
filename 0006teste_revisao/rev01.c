@@ -3,57 +3,87 @@
 
 
 
-struct st_aluno {
-   char matricula[10];
+/*
+structs -> estrutura
+
+*/
+
+struct st_contato {
    char nome[100];
-   char curso[50];
    int ano_nascimento;
+   char telefone[20];
+   char email[100];
 };
+
+struct st_agenda {
+   struct st_contato contatos[100];
+} agenda;
 
 
 int main() {
-   struct st_aluno aluno1;
 
-   printf("informe a matrícula do aluno:\n");
-   fgets(aluno1.matricula, 10, stdin);
+   for (int i = 0; i < 2; i++) {
+      printf("informe o nome do contato:\n");
+      fgets(agenda.contatos[i].nome, 100, stdin);
 
-   printf("informe o nome do aluno:\n");
-   fgets(aluno1.nome, 100, stdin);
+      printf("informe o ano de nascimento do contato:\n");
+      scanf("%d", &agenda.contatos[i].ano_nascimento);
+      getchar();  // evita problema scanf e fgets
 
-   printf("informe o curso do aluno:\n");
-   fgets(aluno1.curso, 50, stdin);
+      printf("informe o telefone do contato:\n");
+      fgets(agenda.contatos[i].telefone, 20, stdin);
 
-   printf("informe o ano nascimento do aluno:\n");
-   scanf("%d", &aluno1.ano_nascimento);
+      printf("informe o email do contato:\n");
+      fgets(agenda.contatos[i].email, 100, stdin);
+      printf("\n");
+   }
 
-   printf("\n========== dados do aluno ==============\n");
-   printf("matricula: %s\n", aluno1.matricula);
-   printf("nome: %s\n", aluno1.nome);
-   printf("curso: %s\n", aluno1.curso);
-   printf("ano nascimento: %d\n", aluno1.ano_nascimento);
+   for (int i = 0; i < 2; i++) {
+      printf("\n========== dados do contato %d ==============\n", i + 1);
+      printf("nome: %s\n", strtok(agenda.contatos[i].nome, "\n") );
+      printf("ano de nascimento: %d\n", agenda.contatos[i].ano_nascimento );
+      printf("telefone: %s\n", strtok(agenda.contatos[i].telefone, "\n") );
+      printf("email: %s\n", strtok(agenda.contatos[i].email, "\n") );
+
+   }
 
    return 0;
 }
 
 
 /*
-informe a matrícula do aluno:
-123124
-informe o nome do aluno:
-vicente goodman
-informe o curso do aluno:
-computação
-informe o ano nascimento do aluno:
-1999
+informe o nome do contato:
+maria sales
+informe o ano de nascimento do contato:
+1990
+informe o telefone do contato:
+32323232
+informe o email do contato:
+maria@gmail.com
+informe o nome do contato:
+bob allan
+informe o ano de nascimento do contato:
+2001
+informe o telefone do contato:
+21212121
+informe o email do contato:
+bob21@gmail.com
 
-========== dados do aluno ==============
-matricula: 123124
+========== dados do contato 1 ==============
+nome: maria sales
+ano de nascimento: 1990
+telefone: 32323232
+email: maria@gmail.com
 
-nome: vicente goodman
+========== dados do contato 2 ==============
+nome: bob allan
+ano de nascimento: 2001
+telefone: 21212121
+email: bob21@gmail.com
 
-curso: computação
 
-ano nascimento: 1999
+
+
 
 
 
