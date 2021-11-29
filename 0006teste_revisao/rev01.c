@@ -1,45 +1,62 @@
 #include <stdio.h>
-
-
+#include <string.h>
 
 
 /*
-union ->
-
-
+union -> a union, separa e utiliza apenas o espaço da maior variavel.
 
 */
 
+union numeros {
+   int num1, num2, num3, num4, num5;
+}n;
+
 
 int main() {
+   n.num1 = 6;
+   printf("valor de num1 é %d\n", n.num1);
+   n.num2 = 8;
+   printf("valor de num2 é %d\n", n.num2);
+   n.num3 = 3;
+   printf("valor de num3 é %d\n", n.num3);
+   n.num4 = 1;
+   printf("valor de num4 é %d\n", n.num4);
+   n.num5 = 5;
+   printf("valor de num5 é %d\n\n\n", n.num5);
 
-   int numero = 42;
-   float nota = 5.8;
-   char letra = 'k';
-   double nota2 = 12.5;
-   char nome[] = "teixeira";
+   printf("valor de num1 é %d\n", n.num1);
+   printf("valor de num2 é %d\n", n.num2);
+   printf("valor de num3 é %d\n", n.num3);
+   printf("valor de num4 é %d\n", n.num4);
+   printf("valor de num5 é %d\n\n", n.num5);
 
+   printf("o 'n' ocupa %ld bytes\n", sizeof(n));
 
-   printf("variavel 'numero' seu valor: %d, ocupa %ld bytes.\n", numero, sizeof(numero));
-   printf("variavel 'nota' seu valor: %.2f, ocupa %ld bytes.\n", nota, sizeof(nota));
-   printf("variavel 'letra' seu valor: %c, ocupa %ld bytes.\n", letra, sizeof(letra));
-   printf("variavel 'nota2' seu valor: %.2lf, ocupa %ld bytes.\n", nota2, sizeof(nota2));
-   printf("variavel 'nome' seu valor: %s, ocupa %ld bytes.\n", nome, sizeof(nome));
-
-   printf("sizef(int): %ld\n", sizeof(int));
    return 0;
 }
 
 
 /*
-variavel 'numero' seu valor: 42, ocupa 4 bytes.
-variavel 'nota' seu valor: 5.80, ocupa 4 bytes.
-variavel 'letra' seu valor: k, ocupa 1 bytes.
-variavel 'nota2' seu valor: 12.50, ocupa 8 bytes.
-variavel 'nome' seu valor: teixeira, ocupa 9 bytes.
-sizef(int): 4
+ no terminal do arquivo usar:
+     gcc arquivo.c -o saida.o -lm
+     ./saida.o
+*/
+
+/*
+valor de num1 é 6
+valor de num2 é 8
+valor de num3 é 3
+valor de num4 é 1
+valor de num5 é 5
 
 
+valor de num1 é 5
+valor de num2 é 5
+valor de num3 é 5
+valor de num4 é 5
+valor de num5 é 5
+
+o 'n' ocupa 4 bytes
 
 
 

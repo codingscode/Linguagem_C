@@ -9,7 +9,7 @@ union -> a union, separa e utiliza apenas o espaço da maior variavel.
 
 
 union pessoa{
-   char nome[100];  // 100bytes
+   char nome[100];  // 100bytes  100 caracteres
    int idade;  // 4 bytes
 };
 
