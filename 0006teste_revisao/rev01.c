@@ -36,11 +36,6 @@ int main() {
 }
 
 
-/*
- no terminal do arquivo usar:
-     gcc arquivo.c -o saida.o -lm
-     ./saida.o
-*/
 
 /*
 valor de num1 é 6
