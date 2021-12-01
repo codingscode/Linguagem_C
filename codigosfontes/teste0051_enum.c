@@ -47,23 +47,9 @@ int main() {
 */
 
 /*
-valor de num1 é 6
-valor de num2 é 8
-valor de num3 é 3
-valor de num4 é 1
-valor de num5 é 5
-
-
-valor de num1 é 5
-valor de num2 é 5
-valor de num3 é 5
-valor de num4 é 5
-valor de num5 é 5
-
-o 'n' ocupa 4 bytes
-a 'soma' valor 23, e ocupa 4 bytes
-memória total ocupada: 8 bytes.
-
+os dias são diferentes.
+numeros indice 0: 4
+numeros indice 10: 32519
 
 
 
