@@ -17,8 +17,8 @@ int main() {
 
 
    printf("valor: %d\n", valor);
-   printf("PI: %f\n", PI);
-   printf("2*PI: %f\n", 2*PI);
+   printf("PI: %.3f\n", PI);
+   printf("2*PI: %.3f\n", 2*PI);
 
    return 0;
 }
@@ -32,8 +32,9 @@ int main() {
 
 /*
 valor: 400
-PI: 3.140000
-2*PI: 6.280000
+PI: 3.140
+2*PI: 6.280
+
 
 
 
