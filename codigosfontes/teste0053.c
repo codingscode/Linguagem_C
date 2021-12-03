@@ -16,7 +16,7 @@ int main() {
 
 
    printf("valor: %d\n", valor);
-   printf("PI: %f\n", PI);
+   printf("PI: %.2f\n", PI);
 
 
    return 0;

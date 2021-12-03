@@ -1,44 +1,33 @@
 #include <stdio.h>
-#include <string.h>
 
 
 /*
-recursividade -> uma função f chama ela mesma
-
+ifndef - diretiva de compilação
 
 
 */
-
-int fib(int n) {
-	if (n == 0) {
-	   return 0;
-	}
-	if (n == 1) {
-	   return 1;
-	}
-	return fib(n - 1) + fib(n - 2);
-}
+//constantes
+#define PI 3.14
 
 
 int main() {
-   int numero = 7;
+   int valor = 8;
+   valor = 400;
 
-   for (int i = 0; i < numero; i++) {
-      printf("%d -> ", fib(i));
-   }
+
+   printf("valor: %d\n", valor);
+   printf("PI: %.2f\n", PI);
+
 
    return 0;
 }
 
 
 /*
- no terminal do arquivo usar:
-     gcc arquivo.c -o saida.o -lm
-     ./saida.o
-*/
+valor: 400
+PI: 3.14
 
-/*
-0 -> 1 -> 1 -> 2 -> 3 ->
+
 
 
 
