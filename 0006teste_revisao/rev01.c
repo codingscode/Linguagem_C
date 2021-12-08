@@ -1,40 +1,50 @@
 #include <stdio.h>
+#include <math.h>
+
 
 
 /*
-ifndef - diretiva de compilação
+obs: para utilizar a biblioteca math
+1) clicar com o botão direito no mouse no projeto_c
+2) ir em c/c++ Build -> settings -> libraries
+3) clicar no + e add 'm'
+4) aplicar e fechar
+
+
+funções matemáticas
+
+
+funções trigonométricas
+cos()
+sin()
+tan()
 
 
 */
 
-#ifndef PI  // se PI não definido. se PI existir
-   #define PI 3.14  // defina
-#endif
 
 int main() {
-   int valor = 8;
-   valor = 400;
+   float angulo = 3.141592/4;  // em radianos. em graus é 45°
+   float coseno1 = cos(angulo);
+   float seno1 = sin(angulo);
+   float tangente1 = tan(angulo);
 
 
-   printf("valor: %d\n", valor);
-   printf("PI: %.3f\n", PI);
-   printf("2*PI: %.3f\n", 2*PI);
-
-   #ifdef PI
-      printf("valor de PI: %.3f\n", PI);
-   #endif
-
+   printf("o cosseno de %.2f é %f\n", angulo, coseno1);
+   printf("o seno de %.2f é %f\n", angulo, seno1);
+   printf("a tangente de %.2f é %f\n", angulo, tangente1);
 
 
    return 0;
 }
 
 
+
 /*
-valor: 400
-PI: 3.140
-2*PI: 6.280
-valor de PI: 3.140
+o cosseno de 0.79 é 0.707107
+o seno de 0.79 é 0.707107
+a tangente de 0.79 é 1.000000
+
 
 
 

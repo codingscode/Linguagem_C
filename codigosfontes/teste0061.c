@@ -6,7 +6,7 @@
 /*
 atof() -> convert string para double
 atoi() -> converte uma string para inteiro
-atol() -> converte string para inteliro longo
+atol() -> converte string para inteiro longo
 
 
 */
@@ -19,7 +19,7 @@ int main() {
    long int valor_il;
 
    strcpy(valor_s, "4534636436");  //
-   printf("valor_s: %s\n", valor_s);
+   printf("valor_s:  %s\n", valor_s);
 
    valor_il = atol(valor_s);
 

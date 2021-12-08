@@ -25,12 +25,12 @@ tan()
 
 int main() {
    float angulo = 3.141592/4;  // em radianos. em graus é 45°
-   float coseno1 = cos(angulo);
+   float cosseno1 = cos(angulo);
    float seno1 = sin(angulo);
    float tangente1 = tan(angulo);
 
 
-   printf("o coseno de %.2f é %f\n", angulo, coseno1);
+   printf("o coseno de %.2f é %f\n", angulo, cosseno1);
    printf("o seno de %.2f é %f\n", angulo, seno1);
    printf("a tangente de %.2f é %f\n", angulo, tangente1);
 
@@ -46,9 +46,9 @@ int main() {
 */
 
 /*
-o coseno de 1.20 é 0.362358
-
-
+o cosseno de 0.79 é 0.707107
+o seno de 0.79 é 0.707107
+a tangente de 0.79 é 1.000000
 
 
 

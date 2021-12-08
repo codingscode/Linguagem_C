@@ -24,11 +24,11 @@ sin()
 
 int main() {
    float angulo = 1.2;  // em radianos
-   float coseno1 = cos(angulo);
+   float cosseno1 = cos(angulo);
    float seno1 = sin(angulo);
 
 
-   printf("o coseno de %.2f é %f\n", angulo, coseno1);
+   printf("o cosseno de %.2f é %f\n", angulo, cosseno1);
    printf("o seno de %.2f é %f\n", angulo, seno1);
 
 
@@ -43,10 +43,8 @@ int main() {
 */
 
 /*
-o coseno de 1.20 é 0.362358
-
-
-
+o cosseno de 1.20 é 0.362358
+o seno de 1.20 é 0.932039
 
 
 

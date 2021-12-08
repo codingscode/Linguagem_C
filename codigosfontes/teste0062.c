@@ -7,7 +7,7 @@
 conversão de strings
 atof() -> convert string para double
 atoi() -> converte uma string para inteiro
-atol() -> converte string para inteliro longo
+atol() -> converte string para inteiro longo
 
 
 
