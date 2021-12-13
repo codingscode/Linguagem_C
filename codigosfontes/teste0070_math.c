@@ -41,7 +41,7 @@ int main() {
    double c = 2;
 
    // numero neperiano
-   printf("o exponencial de %lf é %lf\n", a, exp(a));  // numero e elevado a 0
+   printf("o exponencial de %lf é %lf\n", a, exp(a));  // numero e (numero neperiano) elevado a 0
    printf("o exponencial de %lf é %lf\n", b, exp(b));
    printf("o exponencial de %lf é %lf\n", c, exp(c));
 

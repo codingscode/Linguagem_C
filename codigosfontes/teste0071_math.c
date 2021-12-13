@@ -28,8 +28,8 @@ tanh()
 
 funções exponenciais e logaritmicas
 exp()
-log()
-log10()
+log() -> logaritmo natural
+log10() -> logaritmo na base 10
 
 
 */
