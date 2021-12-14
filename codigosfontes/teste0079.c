@@ -42,6 +42,10 @@ int main() {
 */
 
 /*
+minha_string1: copa
+minha_string2: cabana
+minha_string1: copacabana
+minha_string2: cabana
 
 
 
