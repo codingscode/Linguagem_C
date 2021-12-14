@@ -100,11 +100,8 @@ K é maiusculo.
 ---------------
 ( ) é espaço em branco.
 ---------------
-
-
-
-
-
+b em maiusculo é B.
+K em minusculo é k.
 
 
 

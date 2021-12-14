@@ -79,6 +79,20 @@ int main() {
 */
 
 /*
+! é pontuação.
+---------------
+b é alfanumérico.
+b é alfabetico.
+b é minusculo.
+---------------
+K é alfanumérico.
+K é alfabetico.
+K é maiusculo.
+---------------
+8 é alfanumérico.
+8 é digito decimal.
+---------------
+---------------
 
 
 

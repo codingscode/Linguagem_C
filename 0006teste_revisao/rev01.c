@@ -14,73 +14,89 @@ isdigit() -> " se o caractere é uma digito decimal
 ispunct() -> '' se o caractere é uma pontuação (?!.)
 isspace() -> "" se é um espaço ( )
 isupper() -> "" é maiuscula
+islower() -> "" é minuscula
 tolower() -> converte para minuscula
 toupper() -> converte para maiuscula
 
 
-
-
 */
 
+void verificar(char carac) {
+   if (isalnum(carac)) {
+      printf("%c é alfanumérico.\n", carac);
 
-int main() {
-   char caractere1 = 'h';
+      if (isalpha(carac)) {
+	     printf("%c é alfabetico.\n", carac);
 
+	     if (isupper(carac)) {
+	        printf("%c é maiusculo.\n", carac);
+	     }
+	     else {
+	    	printf("%c é minusculo.\n", carac);
+	     }
+	  }
+	  if (isdigit(carac)) {
+		 printf("%c é digito decimal.\n", carac);
+	  }
 
-   if (isalnum(caractere1)) {
-      printf("%c é alfanumérico.\n", caractere1);
    }
-   else if (isalpha(caractere1)) {
-	  printf("%c é alfabetico.\n", caractere1);
+   else if(ispunct(carac)) {
+      printf("%c é pontuação.\n", carac);
    }
-   else if (isdigit(caractere1)) {
-      printf("%c é digito decimal.\n", caractere1);
+   else if(isspace(carac)) {
+	  printf("(%c) é espaço em branco.\n", carac);
    }
    else {
       printf("nenhuma das anteriores.\n");
    }
 
-   printf("teste1 : %d\n", isalnum('h'));
-   printf("teste2 : %d\n", isalnum('a'));
-   printf("teste3 : %d\n", isalnum('2'));
-   printf("teste4 : %d\n", isalnum('?'));
-   printf("teste5 : %d\n", isalpha('b'));
-   printf("teste6 : %d\n", isalpha('4'));
-   printf("teste7 : %d\n", ispunct('!'));
-   printf("teste8 : %d\n", ispunct('3'));
-   printf("teste9 : %d\n", isdigit(3.5));
-   printf("teste10: %d\n", isdigit(3));
-   printf("teste11: %d\n", isdigit('3'));
-   printf("teste12: %d\n", isspace(' '));
-   printf("teste13: %d\n", isspace('y'));
+}
+
+
+int main() {
+   char caractere1 = '!';
+   char caractere2 = 'b';
+   char caractere3 = 'K';
+   char caractere4 = '8';
+   char caractere5 = ' ';
+
+
+   verificar(caractere1);
+   printf("---------------\n");
+   verificar(caractere2);
+   printf("---------------\n");
+   verificar(caractere3);
+   printf("---------------\n");
+   verificar(caractere4);
+   printf("---------------\n");
+   verificar(caractere5);
+   printf("---------------\n");
+   printf("%c em maiusculo é %c.\n", caractere2, toupper(caractere2));
+   printf("%c em minusculo é %c.\n", caractere3, tolower(caractere3));
 
    return 0;
 }
 
 
+
 /*
-h é alfanumérico.
-teste1 : 8
-teste2 : 8
-teste3 : 8
-teste4 : 0
-teste5 : 1024
-teste6 : 0
-teste7 : 4
-teste8 : 0
-teste9 : 0
-teste10: 0
-teste11: 2048
-teste12: 8192
-teste13: 0
-
-
-
-
-
-
-
-
+! é pontuação.
+---------------
+b é alfanumérico.
+b é alfabetico.
+b é minusculo.
+---------------
+K é alfanumérico.
+K é alfabetico.
+K é maiusculo.
+---------------
+8 é alfanumérico.
+8 é digito decimal.
+---------------
+( ) é espaço em branco.
+---------------
+b em maiusculo é B.
+K em minusculo é k.
 
 
 

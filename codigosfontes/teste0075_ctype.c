@@ -63,7 +63,9 @@ int main() {
 */
 
 /*
-
+B é alfanumérico.
+B é alfabetico.
+B é maiusculo.
 
 
 
