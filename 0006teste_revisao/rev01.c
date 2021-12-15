@@ -1,36 +1,48 @@
 #include <stdio.h>
-#include <string.h>
+#include <time.h>
 
 
 
 /*
-string.h
+funções de data e hora
 
-operações em strings
+clock() -> retorna o número de pulsos de clock decorrido desde que o programa foi lançado
 
-strcpy() -> copia de string
-strcat() -> concatena strings
-strcmp() -> compara duas strings
-strchr() -> localiza a primeira ocorrencia de caractere1actere em uma string
 
 */
 
+
 int main() {
+   long int clock_t, inicio_t, fim_t;
+   double total_t;
 
+   inicio_t = clock();
+   printf("Realizar um loop grande, inicio_t : %ld\n", inicio_t);
+   for (int i = 0; i <=100000000; i++) {}
 
-   char string1[] = "pedro@gmail.com";
-   char caractere1 = '@';
+   fim_t = clock();
+   printf("fim do loop grande, fim_t: %ld\n", fim_t);
 
-   char *retorno = strchr(string1, caractere1);
+   total_t = (double)((double) fim_t - (double) inicio_t)/((double) CLOCKS_PER_SEC);
 
-   printf("A partir do '%c' está '%s'\n", caractere1, retorno);
+   printf("clocks por segundo: %ld\n", CLOCKS_PER_SEC);
+
+   printf("tempo total usado pelo CPU: %lf\n", total_t);
+   printf("finalizando o programa.\n");
+
 
    return 0;
 }
 
 
 /*
-A partir do '@' está '@gmail.com'
+Realizar um loop grande, inicio_t : 451370
+fim do loop grande, fim_t: 643357
+clocks por segundo: 1000000
+tempo total usado pelo CPU: 0.191987
+finalizando o programa.
+
+
 
 
 

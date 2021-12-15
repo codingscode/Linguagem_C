@@ -25,7 +25,7 @@ int main() {
 
    char string1[] = "jeriquaquara";
 
-   printf("tamanho de string1: %d\n", strlen(string1));
+   printf("tamanho de string1: %d\n", (int) strlen(string1));
 
    return 0;
 }
