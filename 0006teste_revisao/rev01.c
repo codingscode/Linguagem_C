@@ -2,7 +2,6 @@
 #include <time.h>
 
 
-
 /*
 funções de data e hora
 
@@ -41,14 +40,6 @@ fim do loop grande, fim_t: 643357
 clocks por segundo: 1000000
 tempo total usado pelo CPU: 0.191987
 finalizando o programa.
-
-
-
-
-
-
-
-
 
 
 
