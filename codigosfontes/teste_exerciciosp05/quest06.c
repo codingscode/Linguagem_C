@@ -13,7 +13,7 @@
 
 
 int main() {
-   int quantidade = 10, soma = 0, negativos = 0;
+   int quantidade = 10, soma = 0;
    int numeros[quantidade];
    float media;
 
@@ -21,16 +21,10 @@ int main() {
    for (int i = 0; i < quantidade; i++) {
       printf("%dº número: \n", i+1);
       scanf("%d", &numeros[i]);
-      if (numeros[i] > 0) {
-    	  soma += numeros[i];
-      }
-      else {
-         negativos += 1;
-      }
-
+      soma += numeros[i];
    }
 
-   media = soma/(quantidade - negativos);
+   media = soma/quantidade;
 
    printf("media: %.2f", media);
 
@@ -42,27 +36,26 @@ int main() {
 
 /*
 1º número:
-8
+4
 2º número:
--4
+3
 3º número:
--3
-4º número:
--6
-5º número:
 10
-6º número:
-1
-7º número:
-1
-8º número:
--8
-9º número:
+4º número:
+2
+5º número:
 8
-10º número:
+6º número:
+8
+7º número:
 9
+8º número:
+12
+9º número:
+5
+10º número:
+1
 media: 6.00
-
 
 
 
