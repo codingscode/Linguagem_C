@@ -13,28 +13,31 @@
 
 
 int main() {
-   int quantidade = 4;
-   float numeros[quantidade], maior = -10000000000, menor = -maior;
+   int valor;
+
+   printf("digite a quantidade de números:\n");
+   scanf("%d", &valor);
+
+   int numeros[valor-1];
+   numeros[0] = 2;
 
 
-   for (int i = 0; i < quantidade; i++) {
-      printf("%dº número: \n", i+1);
-      scanf("%f", &numeros[i]);
+   for (int i = 0; i < valor - 1; i++) {
+	  /*if () {
 
-   }
-
-   for (int j = 0; j < quantidade; j++) {
-      if (maior < numeros[j]) {
-         maior = numeros[j];
 	  }
-      if (menor > numeros[j]) {
-         menor = numeros[j];
-      }
+	  else {
 
+	  }*/
+	  numeros[i+1] = numeros[0] + 1 + i*2;
+
+
+      //printf("%dº: %d\n", i+1, 3 + 2*i);
    }
 
-   printf("\nmaior: %.2f\n", maior);
-   printf("menor: %.2f\n", menor);
+   for (int j=0; j < valor; j++) {
+	  printf("%dº impar: %d\n", j+1,numeros[j]);
+   }
 
 
    return 0;
@@ -42,17 +45,16 @@ int main() {
 
 
 /*
-1º número:
--4
-2º número:
-30
-3º número:
-10
-4º número:
-200
-
-maior: 200.00
-menor: -4.00
+digite a quantidade de números:
+8
+1º impar: 2
+2º impar: 3
+3º impar: 5
+4º impar: 7
+5º impar: 9
+6º impar: 11
+7º impar: 13
+8º impar: 15
 
 
 
