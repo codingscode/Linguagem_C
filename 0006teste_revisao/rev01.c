@@ -14,21 +14,30 @@
 
 int main() {
    int valor;
-
-   printf("digite a quantidade de números:\n");
+   printf("digite um numero impar:\n");
    scanf("%d", &valor);
+   printf("\n");
 
-   int numeros[valor-1];
-   numeros[0] = 2;
+   int impares[valor/2 +1];
 
 
-   for (int i = 0; i < valor - 1; i++) {
-	  numeros[i+1] = numeros[0] + 1 + i*2;
-
+   if (valor % 2 == 0) {
+      printf("o número não é impar.\n");
    }
+   else {
+	  impares[0] = 2;
 
-   for (int j=valor; j > 0; j--) {
-	  printf("%dº impar: %d\n", valor+1-j,numeros[j-1]);
+      for (int i = 0; i < valor/2 + 1; i++) {
+    	 impares[i+1] = 3 + 2*(i);
+
+      }
+
+      for (int j = 0; j < valor/2 + 1; j++) {
+         printf("%d\n", impares[j]);
+      }
+
+
+
    }
 
 
@@ -37,14 +46,28 @@ int main() {
 
 
 /*
-digite a quantidade de números:
-6
-1º impar: 11
-2º impar: 9
-3º impar: 7
-4º impar: 5
-5º impar: 3
-6º impar: 2
+digite um numero impar:
+21
+
+2
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+
+---------------------------------
+digite um numero impar:
+8
+
+o número não é impar.
+
+
 
 
 
