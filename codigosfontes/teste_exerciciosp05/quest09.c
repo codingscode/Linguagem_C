@@ -23,16 +23,8 @@ int main() {
 
 
    for (int i = 0; i < valor - 1; i++) {
-	  /*if () {
-
-	  }
-	  else {
-
-	  }*/
 	  numeros[i+1] = numeros[0] + 1 + i*2;
 
-
-      //printf("%dº: %d\n", i+1, 3 + 2*i);
    }
 
    for (int j=0; j < valor; j++) {
