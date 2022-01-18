@@ -19,12 +19,9 @@ int main() {
    printf("\n");
 
    int impares[valor/2 +1];
+   //printf("%d\n", 0 && 0);
 
-
-   if (valor % 2 == 0) {
-      printf("o número não é impar.\n");
-   }
-   else {
+   if ((valor % 2 != 0) && (valor >= 3)) {
 	  impares[0] = 2;
 
       for (int i = 0; i < valor/2 + 1; i++) {
@@ -35,12 +32,16 @@ int main() {
       for (int j = 0; j < valor/2 + 1; j++) {
          printf("%d\n", impares[j]);
       }
-
-
+   }
+   else if((valor % 2 == 0) && (valor >= 3)) {
+      printf("o número não é impar.\n");
 
    }
+   else if (valor < 0){
+	  printf("valor invalido\n");
+   }
 
-
+   printf("fim");
    return 0;
 }
 

@@ -7,38 +7,23 @@
 
 
 /*
-
+numero natural . >= 0
 
 */
 
 
 int main() {
-   int valor;
-   printf("digite um numero impar:\n");
+   int valor, soma = 0;
+
+   printf("digite um inteiro: \n");
    scanf("%d", &valor);
-   printf("\n");
 
-   int impares[valor/2 +1];
-
-
-   if (valor % 2 == 0) {
-      printf("o número não é impar.\n");
+   for (int i=0; i < valor; i++) {
+      soma += i;
    }
-   else {
-	  impares[0] = 2;
 
-      for (int i = 0; i < valor/2 + 1; i++) {
-    	 impares[i+1] = 3 + 2*(i);
+   printf("a soma de 0 até %d -1 é: %d.\n", valor, soma);
 
-      }
-
-      for (int j = 0; j < valor/2 + 1; j++) {
-         printf("%d\n", impares[j]);
-      }
-
-
-
-   }
 
 
    return 0;
@@ -46,28 +31,9 @@ int main() {
 
 
 /*
-digite um numero impar:
-21
-
-2
-3
-5
-7
-9
-11
-13
-15
-17
-19
-21
-
----------------------------------
-digite um numero impar:
-8
-
-o número não é impar.
-
-
+digite um inteiro:
+6
+a soma de 0 até 6 -1 é: 15.
 
 
 
