@@ -46,28 +46,6 @@ int main() {
 
    printf("maior é : %.2f e aparece %d vezes\n", maior, contador);
 
-   /*
-   if (quant_num > 2) {
-      if (numeros[0] < numeros[1]) {
-         maior = numeros[1];
-      }
-      else {
-         maior = numeros[0];
-
-      }
-      for (int k = 2; k <= quant_num; k++) {
-         if (maior < numeros[k]) {
-            maior = numeros[k];
-         }
-      }
-
-   }
-   else {
-      //logica
-   }
-*/
-
-
    return 0;
 }
 
