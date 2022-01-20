@@ -12,31 +12,63 @@
 
 */
 
+int verdadeiro(int numero) {
+   char stringnumero[4];
+   int doisdigacima, doisdigabaixo;
+
+
+   sprintf(stringnumero, "%d", numero);
+
+   doisdigacima = ((int) stringnumero[0] - 48)*10 + ((int) stringnumero[1] - 48);
+   doisdigabaixo = ((int) stringnumero[2] - 48)*10 + ((int) stringnumero[3] - 48);
+
+   //printf("doisdigacima : %d\n", doisdigacima);
+   //printf("doisdigabaixo: %d\n", doisdigabaixo);
+
+   if (numero == pow(doisdigacima + doisdigabaixo, 2)) {
+      return 1;
+   }
+   else {
+      return 0;
+   }
+
+}
+
 
 int main() {
 
-   int valor, delta,n1 = 11, n2 = 13, n3 = 17;
+   int n1 = 1000, n2 = 9999;
+   char valor[4];
 
-   printf("digite uma valor maior que 11, 13 e 17:\n");
-   scanf("%d", &valor);
+   // converte int para string
+   //sprintf(valor, "%d", 1472);
 
-   delta = valor;
+   //printf("%s.\n", valor); // 1472
+   //printf("%c.\n", valor[0]); // 1
+   //printf("%c.\n", valor[1]); // 4
+   //printf("%c.\n", valor[2]); // 7
+   //printf("%c.\n", valor[3]); // 2
 
-   while ((delta % n1 != 0) && (delta % n2 != 0) && (delta % n3 != 0)) {
-      delta += 1;
+   printf("%d\n", verdadeiro(1356)); // teste com outro número
+
+   for (int i = n1 + 1; i <= n2; i++) {
+      if(verdadeiro(i)) {
+         printf("%d -> ", i);
+      }
    }
 
 
-   printf("primeiro multiplo de um deles após %d: %d.\n", valor, delta);
+   printf("\nfim\n");
 
    return 0;
 }
 
 
 /*
-digite uma valor maior que 11, 13 e 17:
-30
-primeiro multiplo de um deles após 30: 33.
+0
+2025 -> 3025 -> 9801 ->
+fim
+
 
 
 
