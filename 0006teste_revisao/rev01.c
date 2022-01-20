@@ -15,21 +15,28 @@
 
 int main() {
 
-   int valor = 100, soma = 0;
+   int valor, delta,n1 = 11, n2 = 13, n3 = 17;
 
-   for (int i=1; i <= valor; i++) {
-      if ((i % 3 == 0) || (i % 5 == 0)) {
-         soma += i;
-      }
+   printf("digite uma valor maior que 11, 13 e 17:\n");
+   scanf("%d", &valor);
+
+   delta = valor;
+
+   while ((delta % n1 != 0) && (delta % n2 != 0) && (delta % n3 != 0)) {
+      delta += 1;
    }
 
-   printf("soma: %d.\n", soma);
+
+   printf("primeiro multiplo de um deles após %d: %d.\n", valor, delta);
 
    return 0;
 }
 
 
 /*
+digite uma valor maior que 11, 13 e 17:
+30
+primeiro multiplo de um deles após 30: 33.
 
 
 
