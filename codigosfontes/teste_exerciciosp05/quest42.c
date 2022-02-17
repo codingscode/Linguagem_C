@@ -16,8 +16,6 @@
 
 int main() {
 
-
-
    int numeros[] = {};
    int vezent = 0, menor = 0, maior = 0;
    int numero;
@@ -62,10 +60,4 @@ digite um número diferente de 0 :
 
 
 
-
-
-
-
-
 */
-
