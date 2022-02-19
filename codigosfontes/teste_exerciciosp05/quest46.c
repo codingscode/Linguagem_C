@@ -26,7 +26,6 @@ int main() {
    int gerado = aleatorio(maior, menor);
 
    while (gerado != valor) {
-      //printf("gerado: %d\n", gerado);
 
       printf("digite um valor de 1 a 1000 :\n");
       scanf("%d", &valor);
