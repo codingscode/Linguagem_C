@@ -40,7 +40,6 @@ int main() {
       }
    }
 
-
    printf("maior: %d, menor: %d\n", maior, menor);
 
    printf("\nfim do programa.\n");
