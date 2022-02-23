@@ -33,10 +33,26 @@ int main() {
 
 
 /*
+1º valor :
+1
+2º valor :
+2
+3º valor :
+3
+4º valor :
+4
+5º valor :
+5
+6º valor :
+6
+1º valor : 1
+2º valor : 2
+3º valor : 3
+4º valor : 4
+5º valor : 5
+6º valor : 6
 
-
-
-
+fim do programa.
 
 
 */
