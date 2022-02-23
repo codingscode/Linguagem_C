@@ -66,6 +66,7 @@ int main() {
 4
 10º valor :
 5
+
 1º valor : 21
 2º valor : 8
 3º valor : 3
