@@ -43,7 +43,7 @@ int main() {
    printf("\n");
 
    char umastring[8] = {"rapunzel"}; // até o (8-1) caractere. apos isso sai esquisito
-   printf("umastring: %s.\n", umastring);
+   printf("uma string: %s.\n", umastring);
 
    //vetores de inteiros
    int numeros[10];

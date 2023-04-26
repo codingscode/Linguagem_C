@@ -9,7 +9,7 @@ union -> a union, separa e utiliza apenas o espaço da maior variavel.
 
 union numeros {
    int num1, num2, num3, num4, num5;
-}n;
+} n;
 
 
 int main() {

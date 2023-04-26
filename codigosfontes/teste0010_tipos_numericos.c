@@ -21,7 +21,7 @@ int main() {
    divisao = valor1 / valor2;
 
    printf("valor1: %d\n", valor1);
-   printf("valor1: %d\n", valor2);
+   printf("valor2: %d\n", valor2);
    printf("divisao: %d\n", divisao);
 
 

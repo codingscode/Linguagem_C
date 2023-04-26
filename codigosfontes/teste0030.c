@@ -13,7 +13,7 @@
 int main() {
    // fopen(nome_do_arquivo, forma_de_abertura)
    /*
-	w -> abrir o arquivo para escrita (se ele já existir, seu conteudo será sobrescrita)
+	w -> abrir o arquivo para escrita (se ele já existir, seu conteudo será sobrescrito)
 	r -> abrir o arquivo para leitura
 	wa -> abrir o arquivo e acrescenta conteudo.
    */

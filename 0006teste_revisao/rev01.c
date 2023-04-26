@@ -1,79 +1,83 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <math.h>
-
-#include <time.h>
 
 
 /*
+conversão de strings
+atof() -> convert string para double
+atoi() -> converte uma string para inteiro
+atol() -> converte string para inteliro longo
+
+
+
+geração de sequencia pseudo-aleatoria
+rand()    -> gera numero aleatorio
+srand()   -> inicializa o gerador de numeros aleatorios
+
+
+gerenciamento de memória dinamica
+malloc() -> aloca memoria
+calloc() -> mesmo do de cima, mas ele limpa o lixo
+free()   -> libera memória
+realoc() -> realoca memoria, altera o tamanho de memoria ocupado
+
+
+pesquisa e ordenação
+qsort() -> ordena os elementos de uma array
 
 
 
 */
 
-int verificar(int n, int *iteravel) {
-   int cont = 0;
-
-   for (int i=0;i<5;i++) {
-      if (n == iteravel[i]) {
-         cont += 1;
-      }
+int compara(int *x, int *y) {
+   if (*x > *y) {
+      return 1;
    }
-
-   if (cont > 1) {
-      printf("%d é repetido, aparece %d vezes\n", n, cont);
+   else if (*x == *y) {
+      return 0;
    }
    else {
-	  printf("%d não é repetido.\n", n);
+      return -1;
    }
-
-   return 1;
 }
 
 
 int main() {
+   int numeros[] = { 8, 3, 12, 29, 15, 22, 10 };
 
-   int numeros[5] = {};
-   int valor, numero = 0;
-
-   for (int i=0; i<5; i++) {
-      printf("%dº valor:\n", i+1);
-      scanf("%d", &valor);
-      numeros[i] = valor;
+   for (int i = 0; i < 7; i++) {
+      printf("%d ", numeros[i]);
    }
+   printf("\n");
 
+   qsort(numeros, 7, sizeof(int), (void *)compara); // (iteravel, tamanho ocupado de cada elemento, quantidade elementos, cast)
 
-   for (int j=0; j<5; j++) {
-      verificar(numeros[j], numeros);
-
+   for (int i = 0; i < 7; i++) {
+      printf("%d ", numeros[i]);
    }
+   printf("\n");
 
-   printf("\nfim do programa.\n");
 
    return 0;
 }
 
 
 /*
-1º valor:
-3
-2º valor:
-5
-3º valor:
-5
-4º valor:
-8
-5º valor:
-9
+ no terminal do arquivo usar:
+     gcc arquivo.c -o saida.o -lm
+     ./saida.o
+*/
 
-3 não é repetido.
-5 é repetido, aparece 2 vezes
-5 é repetido, aparece 2 vezes
-8 não é repetido.
-9 não é repetido.
+/*
+8 3 12 29 15 22 10
+3 8 10 12 15 22 29
 
-fim do programa.
+
+
+
+
+
 
 
 */

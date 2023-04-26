@@ -42,7 +42,7 @@ int main() {
    for (int i = 0; i < 3; i++) {
       printf("\n========== dados do contato %d ==============\n", i + 1);
       printf("nome: %s\n", agenda.contatos[i].nome);
-      printf("ano de nascimento: %d\n", agenda.contatos[i].ano_nascimento);
+      printf("ano de nascimento: %d\n\n", agenda.contatos[i].ano_nascimento);
       printf("telefone: %s\n", agenda.contatos[i].telefone);
       printf("email: %s\n", agenda.contatos[i].email);
 
